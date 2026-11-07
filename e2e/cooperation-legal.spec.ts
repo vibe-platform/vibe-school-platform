@@ -103,6 +103,7 @@ test("test owner can update isolated legal settings and publish a partner withou
     expect(anonymousPartners.ok()).toBeTruthy();
     expect(await anonymousPartners.json()).toEqual(expect.arrayContaining([expect.objectContaining({ name: "Проверочная точка во временной базе" })]));
     await page.goto("/partners");
+    await page.getByRole("button", { name: /Проверочная точка во временной базе/u }).click();
     await expect(page.getByRole("heading", { name: "Проверочная точка во временной базе" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Встреча" })).toHaveCount(0);
   } finally {
