@@ -177,7 +177,13 @@ test("four profiles, assignment photo lifecycle, grading, one-time reward, marke
   await page.getByLabel("Ответ на вопрос 2").fill("Пример решён, прикладываю фото.");
   await page.getByLabel("Добавить фото решения").setInputFiles(classroomImage);
   await expect(page.getByRole("img", { name: "Фото решения" })).toBeVisible();
+  const submitResponse = page.waitForResponse((response) => {
+    const path = new URL(response.url()).pathname;
+    return path.startsWith("/api/tasks/") && path.endsWith("/submit") && response.request().method() === "POST";
+  });
   await page.getByRole("button", { name: /Сдать работу/u }).click();
+  const submitted = await submitResponse;
+  expect(submitted.status(), await submitted.text()).toBe(200);
   await expect(page.getByRole("heading", { name: "Работа у учителя" })).toBeVisible();
   await expect(page.getByText("На проверке").first()).toBeVisible();
   await expect(page.request.get("/api/profile/customize").then((response) => response.json())).resolves.toMatchObject({ totalExp: 0, level: 1 });

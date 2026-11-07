@@ -1,0 +1,28 @@
+name: Check assignment submission
+on:
+  push:
+    branches: [contest-security]
+    paths: [e2e/presentation-audit.spec.ts]
+permissions:
+  contents: read
+jobs:
+  scenario:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run build --workspace packages/shared
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+        env:
+          E2E_GREP: 'four profiles, assignment photo lifecycle'
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assignment-submission-diagnostics
+          path: test-results/
