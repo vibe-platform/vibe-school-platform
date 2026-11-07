@@ -37,6 +37,8 @@ jobs:
           docker compose exec -T vibe sh -c 'echo persistence-check > /app/data/presentation/probe'
           docker compose up -d --force-recreate --wait
           docker compose exec -T vibe sh -c 'test "$(cat /app/data/presentation/probe)" = persistence-check'
+          docker compose exec -T vibe sh -c 'cd /app/data/uploads && sha256sum -c /app/contest-assets/manifest.sha256'
+          docker compose exec -T vibe node /app/scripts/check-public-content.mjs
       - if: always()
         run: docker compose logs
       - if: always()
