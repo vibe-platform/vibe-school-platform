@@ -178,7 +178,7 @@ export async function registerLibraryRoutes(app: FastifyInstance) {
     return reply.send(bytes);
   });
 
-  app.get("/api/reviews", async (request) => {
+  app.get("/api/reviews", async (_request) => {
     const isSynthetic = false;
     const [rows, aggregate] = await Promise.all([
       prisma.publicReview.findMany({ where: { isSynthetic, status: "APPROVED" }, select: reviewSelect, orderBy: { createdAt: "desc" }, take: 100 }),

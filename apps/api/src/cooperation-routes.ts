@@ -53,7 +53,7 @@ function dto(partner: PartnerRecord) {
 }
 
 export async function registerCooperationRoutes(app: FastifyInstance) {
-  app.get("/api/partners", async (request) => {
+  app.get("/api/partners", async (_request) => {
     const rows = await prisma.cooperationPartner.findMany({
       where: {
         isSynthetic: false,

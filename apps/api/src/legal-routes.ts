@@ -93,7 +93,7 @@ async function currentVersions() {
 }
 
 export async function registerLegalRoutes(app: FastifyInstance) {
-  app.get("/api/legal/settings", async (request) => {
+  app.get("/api/legal/settings", async (_request) => {
     const settings = await sharedLegalSettings();
     const versions = await currentVersions();
     return {
