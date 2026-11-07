@@ -40,8 +40,9 @@ try {
     const { id, ...assignment } = row;
     const seedKey = "contest-source-" + id;
     if (await db.assignment.findUnique({ where: { seedKey } })) continue;
-    const questions = data.questions.filter((item) => item.assignmentId === id).map(({ assignmentId: _assignmentId, ...item }) => ({
-      ...item, ignoreCase: bool(item.ignoreCase), trimWhitespace: bool(item.trimWhitespace), photoRequired: bool(item.photoRequired),
+    const questions = data.questions.filter((item) => item.assignmentId === id).map((item) => ({
+      prompt: item.prompt, type: item.type, points: item.points, optionsJson: item.optionsJson, acceptedJson: item.acceptedJson,
+      tolerance: item.tolerance, sortOrder: item.sortOrder, ignoreCase: bool(item.ignoreCase), trimWhitespace: bool(item.trimWhitespace), photoRequired: bool(item.photoRequired),
     }));
     await db.assignment.create({ data: {
       ...assignment, seedKey, schoolId: membership.schoolId, teacherId: teacher.id, published: true,
