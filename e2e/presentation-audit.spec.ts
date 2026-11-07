@@ -486,6 +486,12 @@ test("four profiles, assignment photo lifecycle, grading, one-time reward, marke
     await expect(lastCosmetic).toBeVisible();
     await lastCosmetic.scrollIntoViewIfNeeded();
     await page.mouse.wheel(0, wheel);
+    // A wheel event is asynchronous; measure only after scrolling settles.
+    await expect.poll(() => page.evaluate(() => {
+      const card = document.querySelector(".cosmetic-grid .cosmetic-card:last-child")!.getBoundingClientRect();
+      const actions = document.querySelector(".customize-actions")!.getBoundingClientRect();
+      return card.bottom - actions.top;
+    }), { timeout: 5000 }).toBeLessThanOrEqual(0);
     const cosmeticLayout = await page.evaluate(() => {
       const last = document.querySelector(".cosmetic-grid .cosmetic-card:last-child")!.getBoundingClientRect();
       const actions = document.querySelector(".customize-actions")!.getBoundingClientRect();
