@@ -1,0 +1,42 @@
+name: Contest checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build
+      - run: docker compose up -d --wait
+      - name: Verify frontend and profiles
+        run: |
+          curl -fsS http://127.0.0.1:3101/ > /tmp/vibe-home.html
+          curl -fsS http://127.0.0.1:3101/api/health
+          curl -fsS http://127.0.0.1:3101/api/auth/test/profiles > /tmp/vibe-profiles.json
+          node -e "const p=require('/tmp/vibe-profiles.json'); if(p.length!==4 || p.some(x=>!x.available)) process.exit(1)"
+      - name: Verify persistence
+        run: |
+          docker compose exec -T vibe sh -c 'echo persistence-check > /app/data/presentation/probe'
+          docker compose up -d --force-recreate --wait
+          docker compose exec -T vibe sh -c 'test "$(cat /app/data/presentation/probe)" = persistence-check'
+      - if: always()
+        run: docker compose logs
+      - if: always()
+        run: docker compose down -v
