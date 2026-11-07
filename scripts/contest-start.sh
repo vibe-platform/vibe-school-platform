@@ -9,4 +9,10 @@ if [ ! -f /app/data/presentation/.seeded ]; then
   node /app/scripts/import-contest-content.mjs
   touch /app/data/presentation/.seeded
 fi
+# Apply the published photo update to pre-existing contest volumes as well.
+if [ ! -f "/app/data/uploads/f1ff6abc9905a49e58caa870bf828ea102548602938466b9ddb4a2565c98c618.jpg" ]; then
+  tar -xf /app/contest-assets/public-06.tar -C /app/data/uploads f1ff6abc9905a49e58caa870bf828ea102548602938466b9ddb4a2565c98c618.jpg
+fi
+(cd /app/data/uploads && echo '0337a1144f830815b3635436222b9704f5a4be12e21e8da5a6199b6d11b43929  f1ff6abc9905a49e58caa870bf828ea102548602938466b9ddb4a2565c98c618.jpg' | sha256sum -c -)
+node /app/scripts/sync-maxim-photo.mjs
 exec node apps/api/dist/server.js

@@ -43,7 +43,7 @@
       "name": "Максим",
       "role": "Кодер",
       "description": "Отвечает за техническую реализацию проекта и разработку цифровых решений. Создаёт и поддерживает функциональность сайта, работает с программным кодом, интегрирует необходимые инструменты и обеспечивает стабильную работу системы. Превращает проектные идеи и концепции в работающие технологические продукты.\n\nЦитата:\n\n\"Там, где заканчиваются идеи, начинается код, превращающий невозможное в реальность\".\n",
-      "imageAttachmentId": "cmw6hhbbn00h69zr9ce8abav8",
+      "imageAttachmentId": "cmw6r183t00ld9zr9i5yks9ql",
       "sortOrder": 3,
       "isVisible": 1
     }
@@ -926,15 +926,15 @@
       "mimeType": "image/jpeg"
     },
     {
-      "id": "cmw6hhbbn00h69zr9ce8abav8",
-      "pageId": "main",
-      "fileName": "239386ff749dee45a935b7f9b7537d0944a3e8eb83ef8de59ae3aafdc73c2dcf.jpg",
-      "mimeType": "image/jpeg"
-    },
-    {
       "id": "cmw6hkfp400h89zr9oga0c8xa",
       "pageId": "main",
       "fileName": "b1eca5d18de039037f2f8fc17c43245af624378297a9ca717eeb8721eda0b65c.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6r183t00ld9zr9i5yks9ql",
+      "pageId": "main",
+      "fileName": "f1ff6abc9905a49e58caa870bf828ea102548602938466b9ddb4a2565c98c618.jpg",
       "mimeType": "image/jpeg"
     }
   ],
