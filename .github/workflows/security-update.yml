@@ -1,0 +1,45 @@
+name: Prepare dependency security update
+on:
+  push:
+    branches: [contest-security]
+    paths:
+      - .github/workflows/security-update.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: contest-security
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install security fixes
+        run: |
+          npm pkg set 'overrides.@prisma/config.deepmerge-ts=^8.0.0'
+          npm install @fastify/static@10.1.10 sharp@0.35.5 zod@4.6.6
+          npm audit fix || true
+          npm install --save-dev vitest@5.1.0
+      - name: Check dependency advisories
+        run: |
+          npm audit --omit=dev --audit-level=high
+          npm audit --audit-level=high
+      - name: Check compatibility
+        run: |
+          npx prisma generate
+          npm run build
+          npm run typecheck
+          npm run lint
+          npm test
+      - name: Commit reviewed dependency files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -f audit-before.json audit-after-full.json
+          git add package.json package-lock.json
+          git commit -m 'Upgrade vulnerable dependencies'
+          git push origin HEAD:contest-security
