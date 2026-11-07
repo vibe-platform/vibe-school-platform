@@ -22,7 +22,7 @@ async function csrf(page: import("@playwright/test").Page) {
   return page.evaluate(() => decodeURIComponent(document.cookie.match(/(?:^|; )vibe_csrf=([^;]+)/u)?.[1] ?? ""));
 }
 
-test("test owner can fill a private legal draft and publish a partner without a meeting section", async ({ page, baseURL }) => {
+test("test owner can update isolated legal settings and publish a partner without a meeting section", async ({ page, baseURL }) => {
   test.setTimeout(90_000);
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
@@ -43,12 +43,11 @@ test("test owner can fill a private legal draft and publish a partner without a 
   await expect(page.getByRole("textbox", { name: "Текст согласия" })).toHaveCount(0);
   await expect(page.getByText("Перед запуском", { exact: false })).toHaveCount(0);
   await page.getByRole("button", { name: "Сохранить сведения" }).click();
-  await expect(page.locator(".toast")).toContainText("Черновик тестового владельца сохранён");
+  await expect(page.locator(".toast")).toContainText("Юридические сведения сохранены");
   await page.reload();
   for (const [label, value] of legalInputs) await expect(page.getByRole("textbox", { name: label })).toHaveValue(value);
-  await expect(page.getByText("не меняет документы для остальных пользователей")).toBeVisible();
   const publicSettings = await fetch(new URL("/api/legal/settings", baseURL ?? "http://127.0.0.1:5174")).then((response) => response.json());
-  expect(publicSettings.organizationFullName).not.toBe("Проверочное значение в одноразовой e2e-базе");
+  expect(publicSettings.organizationFullName).toBe("Проверочное значение в одноразовой e2e-базе");
   await page.goto("/legal/owner");
   await expect(page.locator(".legal-document-body")).toContainText("Проверочное значение в одноразовой e2e-базе");
   await expect(page.locator(".legal-heading .eyebrow")).toHaveCount(0);

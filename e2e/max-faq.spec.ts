@@ -66,7 +66,8 @@ test("owner FAQ lifecycle and MAX status API work without real MAX credentials",
   await expect(page.getByText("По выбранному запросу опубликованных ответов не найдено.")).toBeVisible();
 
   const status = await page.request.get("/api/owner/max/status");
-  expect(status.status()).toBe(403);
+  expect(status.status()).toBe(200);
+  expect((await status.json()).status).toBe("DISABLED");
 
   await enterProfile(page, 1);
   await page.getByRole("button", { name: "Открыть главное меню" }).click();

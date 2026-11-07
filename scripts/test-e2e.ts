@@ -5,6 +5,32 @@ import { fileURLToPath } from "node:url";
 import { PrismaClient } from "@prisma/client";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
+// Each browser scenario gets a fresh database; tests mutate roles and schools.
+if (!process.env.E2E_GREP) {
+  const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+  const listing = execFileSync(npmCommand, ["exec", "playwright", "--", "test", "--list", "--reporter=json"], {
+    cwd: root, encoding: "utf8", shell: process.platform === "win32",
+  });
+  const tree = JSON.parse(listing) as { suites: Array<{ specs?: Array<{ title: string }>; suites?: unknown[] }> };
+  const titles: string[] = [];
+  const visit = (suite: { specs?: Array<{ title: string }>; suites?: unknown[] }) => {
+    for (const spec of suite.specs ?? []) titles.push(spec.title);
+    for (const child of suite.suites ?? []) visit(child as typeof suite);
+  };
+  for (const suite of tree.suites) visit(suite);
+  if (!titles.length || new Set(titles).size !== titles.length) throw new Error("Browser test list is empty or contains duplicate titles");
+  let failed = 0;
+  const slash = String.fromCharCode(92);
+  for (const title of titles) {
+    const escaped = [...title].map((character) => (slash + "^$.*+?()[]{}|").includes(character) ? slash + character : character).join("");
+    console.log("Isolated browser scenario:", title);
+    try {
+      execFileSync(npmCommand, ["run", "test:e2e"], { cwd: root, env: { ...process.env, E2E_GREP: escaped }, stdio: "inherit", shell: process.platform === "win32" });
+    } catch { failed++; }
+  }
+  if (failed) throw new Error(`${failed} isolated browser scenario(s) failed`);
+  process.exit(0);
+}
 const dataRoot = resolve(root, "data", "e2e-runs");
 mkdirSync(dataRoot, { recursive: true });
 const runDir = mkdtempSync(join(dataRoot, "run-"));
