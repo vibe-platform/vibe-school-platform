@@ -1,0 +1,1473 @@
+{
+  "about": [
+    {
+      "id": "main",
+      "title": "О Вайбе",
+      "description": "Вайб помогает сделать школьную жизнь интереснее и доброжелательнее. Здесь важны усилия, любознательность и поддержка: каждый может пробовать новое, видеть свой личный прогресс и получать признание за вклад."
+    }
+  ],
+  "team": [
+    {
+      "id": "cmw6hllgq00hf9zr9m4p7fr63",
+      "pageId": "main",
+      "name": "Даниил",
+      "role": "Менеджер",
+      "description": "Отвечает за стратегию развития проекта, координацию команды и организацию совместной работы. Формирует общую концепцию, распределяет задачи, контролирует сроки и объединяет работу разных специалистов в единый результат. Занимается развитием партнёрских связей и проработкой проектных решений, опираясь на исследования и практический опыт.\n\nЦитата:\n\n\"Мы не заставляем детей оставаться на нашей платформе. Мы создаём платформу так, чтобы оставаться с нами было естественным желанием ребенка.\"",
+      "imageAttachmentId": "cmw6hgzra00h49zr901xlruh5",
+      "sortOrder": 0,
+      "isVisible": 1
+    },
+    {
+      "id": "cmw6hllgq00hg9zr9voejnho3",
+      "pageId": "main",
+      "name": "Тимофей",
+      "role": "Исследователь",
+      "description": "Проводит исследовательскую работу по проекту, изучает профильные материалы и анализирует актуальные решения. Формирует научно-теоретическую базу, оценивает перспективы внедрения идей и обосновывает проектные решения на основе исследований, аналитики и достоверных источников.\n\nЦитата:\n\n\"Если нужной информации нет в интернете - значит, я просто ещё не начал искать\"\n",
+      "imageAttachmentId": "cmw6gzwfk00go9zr9hd2zxla8",
+      "sortOrder": 1,
+      "isVisible": 1
+    },
+    {
+      "id": "cmw6hllgq00hh9zr9yjvo3uhw",
+      "pageId": "main",
+      "name": "Вика",
+      "role": "Дизайнер",
+      "description": "Отвечает за визуальную концепцию и оформление проекта. Разрабатывает дизайн интерфейсов, графических материалов и презентаций, формирует единый визуальный стиль и обеспечивает удобство восприятия информации. Следит за эстетикой, функциональностью и целостностью визуальных решений.\n\nЦитата:\n\"Дизайн — это когда идея обретает форму, а форма начинает говорить сама за себя\".\n",
+      "imageAttachmentId": "cmw6hbmk500gs9zr96979sd04",
+      "sortOrder": 2,
+      "isVisible": 1
+    },
+    {
+      "id": "cmw6hllgq00hi9zr988hykjw6",
+      "pageId": "main",
+      "name": "Максим",
+      "role": "Кодер",
+      "description": "Отвечает за техническую реализацию проекта и разработку цифровых решений. Создаёт и поддерживает функциональность сайта, работает с программным кодом, интегрирует необходимые инструменты и обеспечивает стабильную работу системы. Превращает проектные идеи и концепции в работающие технологические продукты.\n\nЦитата:\n\n\"Там, где заканчиваются идеи, начинается код, превращающий невозможное в реальность\".\n",
+      "imageAttachmentId": "cmw6r183t00ld9zr9i5yks9ql",
+      "sortOrder": 3,
+      "isVisible": 1
+    }
+  ],
+  "sections": [
+    {
+      "id": "cmw6hllgq00hj9zr920og2y6s",
+      "pageId": "main",
+      "title": "Что такое Вайб?",
+      "body": "ВАЙБ — цифровая экосистема мотивации и индивидуального развития, объединяющая образование, игровые механики и реальные возможности. Проект помогает превратить повседневные достижения в личный прогресс, поощряя любознательность, инициативность и стремление к новым знаниям.",
+      "imageAttachmentId": "cmw6h692700gq9zr97w20rt0a",
+      "sortOrder": 0,
+      "isVisible": 1
+    },
+    {
+      "id": "cmw6hllgq00hk9zr9ki8eitw3",
+      "pageId": "main",
+      "title": "Мы в Телеграме!",
+      "body": "Хотите следить за нашими новостями? Подписывайтесь на наш телеграм канал!",
+      "imageAttachmentId": "cmw6hkfp400h89zr9oga0c8xa",
+      "sortOrder": 1,
+      "isVisible": 1
+    }
+  ],
+  "partners": [
+    {
+      "id": "cmvtp4ngx00019z91zxi5yc8n",
+      "name": "МБОУ – СОШ № 7 им. А. С. Семенка",
+      "category": "Образовательная организация",
+      "city": "Клинцы",
+      "shortDescription": "Контакты и адрес:\nАдрес: Брянская область, г. Клинцы, ул. Свердлова, д. 152. \n2gis.ru +1\nТелефон: +7 (48336) 5-20-47, +7 (48336) 5-20-49. \nsh7-klincy-r15.gosweb.gosuslugi.ru +1\nЭлектронная почта: klsch7@yandex.ru \nchecko.ru +1\nСайты:\n https://klsch7.ru/struktura.html — собственный сайт школы.\n https://klsch7.gosuslugi.ru/nasha-shkola/administratsiya/ — официальная площадка с разделом «Администрация», документами и объявлениями для родителей. \nСообщество во «ВКонтакте»: официальная страница школы. \nНемного о школе\nШкола носит имя Героя Российской Федерации Анатолия Семенка — в её честь на здании установлена памятная доска. Зарегистрирована школа в 2002 году. Директор — Кравченко Валентина Николаевна. В школе действует спортивный клуб «Олимп», активный отряд ЮИД (юные инспекторы дорожного движения) и инфоцентр «Школьный городок»; школа ведёт страницы в соцсетях с новостями о конкурсах и внеурочных мероприятиях.",
+      "mapUrl": "https://yandex.ru/maps/?text=Клинцы%2C%20улица%20Свердлова%2C%20152&ysclid=mw3ldu312u36955252",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 0,
+      "archivedAt": null
+    },
+    {
+      "id": "cmw25j3mf00139zx0w4tajswr",
+      "name": "МБОУ №3 им. С. Орджоникидзе",
+      "category": "Образовательная организация",
+      "city": "Клинцы",
+      "shortDescription": "Контакты и адрес\n\nАдрес: Брянская область, г. Клинцы, ул. Калинина, д. 137. \n\nЧасы работы: пн–сб 07:30–19:00.\n\nДиректор: Харченко Татьяна Александровна (назначена в июле 2019 года). \n\nТелефон: +7 (48336) 5-52-28. \n\n\nСайты:\n  https://klsch3.gosuslugi.ru/?ysclid=mw3igr1pk625632848 — основная площадка, где публикуют новости, объявления и информацию для родителей. \n https://klsch3.edusite.ru/?ysclid=mw3igcm4f647708142  — альтернативный ресурс школы. \nСообщество во «ВКонтакте»: vk.ru/soshnumber3klinzsiti. \nНемного о школе:\nШкола работает с 2001 года. Здесь реализуют классические традиции российского образования, создают условия для самореализации учеников и педагогов в разных видах деятельности. В школе активно ведётся внеурочная работа: ученики участвуют в конкурсах (например, «Внимание, поезд!» по безопасности на железной дороге), ходят на экскурсии (как в Клинцовскую детскую библиотеку), проходят тематические недели (неделя финансовой грамотности). Также в школе работает психологическая служба.",
+      "mapUrl": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_3_imeni_s_ordzhonikidze/231511951533/?ysclid=mw3iq9v8z522090582",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 1,
+      "archivedAt": null
+    },
+    {
+      "id": "cmw25oipj001t9zx0vq9q9qwv",
+      "name": "МБОУ №9 им. А. Г. Карлова",
+      "category": "Образовательная организация",
+      "city": "Клинцы",
+      "shortDescription": "Контакты и адрес\nАдрес: Брянская область, г. Клинцы, ул. Калинина, д. 155. \nЧасы работы: пн–сб 08:30–17:00. \nДиректор: Бурнос Жанна Александровна (руководит школой с 16 июня 2020 года, до неё директором была Ольга Владимировна Короленко). \nТелефоны: 8 (48336) 5-51-75 — основной; 8 (48336) 5-51-87 — телефон директора. \nklsch9.gosuslugi.ru +1\nЭлектронная почта: klsch9@yandex.ru\nСайты:\n https://klsch9.gosuslugi.ru/— основной портал школы с новостями и информацией для родителей. \n https://klsch9.edusite.ru/sveden/managers— альтернативный ресурс школы. \n https://bus.gov.ru/public/agency/agency.html?agency=1943— старый сайт школы. \nСообщество во «ВКонтакте»: . \nПочему школа носит имя дипломата\n12 мая 2023 года школе № 9 присвоено имя Андрея Геннадьевича Карлова — российского дипломата, Чрезвычайного и Полномочного Посла, Героя Российской Федерации (звание присвоено посмертно в 2016 году), и тогда же в школе открыли мемориальную доску. \nmid.ru +1\n\nИмя обязывает: в школе с 2020 года работает клуб юных дипломатов, ученики участвуют в программе «Дипломаты Будущего», ездят на форумы «Карловские чтения», а спикером у ребят однажды выступала официальный представитель МИД России Мария Захарова.",
+      "mapUrl": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9/146236610526/",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 2,
+      "archivedAt": null
+    },
+    {
+      "id": "cmw25syoa002h9zx0s0ps6fez",
+      "name": "Флопик - сервисный центр",
+      "category": "Коммерческая организация",
+      "city": "Клинцы",
+      "shortDescription": "Флопик — сервисная компания, г. Клинцы\nПолное название: Флопик, сервисная компания (ремонт компьютеров и услуги).\n\nКонтакты и адрес\nАдрес: Брянская область, г. Клинцы, проспект Ленина, д. 16. \nЧасы работы: пн–пт 09:00–17:00 (в выходные закрыто).\nТелефон: +7 (48336) 4-01-88 — номер встречается в старых справочниках по адресу ул. Парижской Коммуны, 17, так что перед визитом лучше позвонить и уточнить актуальность. \nКарточка в сервисах:\nЯндекс — рейтинг 4.6.\n 2ГИС — 5 из 5 по оценке пользователя.\n\nНемного о компании\nФлопик — компьютерный сервис «широкого профиля» для частных клиентов и офисов:\n\nремонт компьютеров, ноутбуков и планшетов;\nремонт и обслуживание оргтехники: принтеры, заправка картриджей HP, Canon, Samsung, Kyocera, Epson, Brother, Xerox и других марок;\nвосстановление данных, сервисное обслуживание;\nпродажа расходных материалов для оргтехники;\n\nоплата — наличными, картой и по безналу. \n\nВ отзывах пользователи хвалят и сервис, и цены — «не первый раз обращаюсь за ремонтом принтеров, компьютеров и ноутбуков, всегда помогут подобрать комплектующие».",
+      "mapUrl": "https://yandex.ru/maps/org/flopik/43428346009/",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 3,
+      "archivedAt": null
+    },
+    {
+      "id": "cmw25vsnp00349zx0lqaqfbfc",
+      "name": "Скорая компьютерная помощь — сервисный центр",
+      "category": "Коммерческая организация",
+      "city": "Клинцы",
+      "shortDescription": "Контакты и адрес:\nАдрес: Брянская область, г. Клинцы, ул. Октябрьская, д. 30, цокольный этаж. \nЧасы работы: по карточке в Яндексе — пн–пт 09:00–18:00\nТелефон: +7 (950) 694-52-94. \nРейтинг: 4.9 в Яндекс Картах. \n\nНемного о компании\nСервис работает больше 10 лет и, по собственным данным, восстановил свыше 10 000 устройств — при этом у мастеров свои запчасти, в наличии около 3 000 деталей, поэтому с заменой обычно не затягивают . Перед ремонтом делают бесплатную диагностику. \n\nЧем занимаются:\n\nремонт компьютеров, ноутбуков, телефонов и планшетов;\nмодернизация и сборка ПК на заказ, апгрейд;\nвосстановление данных;\nнастройка ПО: драйверы, программы, антивирусы, лечение вирусов, блокировка рекламы;\nчистка от перегрева и замена термопасты;\nзамена комплектующих: матрицы, клавиатуры, аккумуляторы, разбитые экраны, разъёмы и кнопки;\nснятие паролей и блокировок.",
+      "mapUrl": "https://yandex.ru/maps/org/skoraya_kompyuternaya_pomoshch/1280052414/",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 4,
+      "archivedAt": null
+    },
+    {
+      "id": "cmw25xvsc003l9zx0glp1zczo",
+      "name": "И. П. Марченко",
+      "category": "Индивидуальный предприниматель",
+      "city": "Клинцы",
+      "shortDescription": "Адреса и контакты:\n+8-920-604-29-86\nБрянская область, г. Клинцы, ул. Ворошилова, д3\n\nНемного о предпринимателе:\nРемонт и продажа компьютерной техники.",
+      "mapUrl": "https://yandex.ru/maps/10653/klintsy/house/ulitsa_voroshilova_3/Z0sYdAJlQEcDQFtofXt0dXRiYw==/",
+      "isPublished": 1,
+      "isSynthetic": 0,
+      "sortOrder": 5,
+      "archivedAt": null
+    }
+  ],
+  "media": [
+    {
+      "id": "cmw3lycrl007i9zzlp6116rvs",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24eu5400099zefcf5vujtf",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3lycrl007j9zzlly4hd7hp",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24ewi6000b9zefmssyv1up",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3lycrl007k9zzlkjxp1urg",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24ezdg000d9zefwiw6vpg5",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3lycrl007l9zzlsjvk00wx",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24f2cr000f9zef61kzz85w",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3lycrl007m9zzlikihyqti",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24f3xp000h9zefurqduqq6",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 4
+    },
+    {
+      "id": "cmw3lycrl007n9zzl3ku9esz6",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24f5w5000j9zefld5zme4i",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 5
+    },
+    {
+      "id": "cmw3lycrl007o9zzlbvd5bgqy",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24f8b0000l9zefxswf17pf",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 6
+    },
+    {
+      "id": "cmw3lycrm007p9zzlaua19irw",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24fat3000n9zefo2l2m1mk",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 7
+    },
+    {
+      "id": "cmw3lycrm007q9zzlff31uzoa",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24i8gu00019zx05mcilrti",
+      "type": "LOCATION",
+      "caption": "Основное здание",
+      "sortOrder": 8
+    },
+    {
+      "id": "cmw3lycrm007r9zzldvw7crl3",
+      "partnerId": "cmvtp4ngx00019z91zxi5yc8n",
+      "imageAttachmentId": "cmw24pl5e00059zx01q1cniiq",
+      "type": "LOCATION",
+      "caption": "Расположение в яндекс картах",
+      "sortOrder": 9
+    },
+    {
+      "id": "cmw3ma61u00869zzlht4vpfyz",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25gvje000n9zx005ch0r2h",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3ma61u00879zzlivhe4eu6",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25gyp2000p9zx046y3e8yr",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3ma61u00889zzloeqrfv4e",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25hdqi000r9zx0bqln4x3f",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3ma61u00899zzl5pl4rm0u",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25hg3b000t9zx0wfjbvibz",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3ma61u008a9zzlyxt3ohcr",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25hixk000v9zx02u0vydl2",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 4
+    },
+    {
+      "id": "cmw3ma61u008b9zzlqkd4j286",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25hrpy000x9zx0m2ekdesr",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 5
+    },
+    {
+      "id": "cmw3ma61u008c9zzlk6qa8ys1",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25i8og000z9zx0v41cjhvk",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 6
+    },
+    {
+      "id": "cmw3ma61u008d9zzlt2f8qwyg",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw25il7300119zx0pd87y6ag",
+      "type": "CONTRACT",
+      "caption": "Соглашение о сотрудничестве со школой",
+      "sortOrder": 7
+    },
+    {
+      "id": "cmw3ma61u008e9zzlzg2wfdpc",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw3j1m4300219zzlh63w700t",
+      "type": "LOCATION",
+      "caption": "Основное здание школы",
+      "sortOrder": 8
+    },
+    {
+      "id": "cmw3ma61u008f9zzlphbezkbd",
+      "partnerId": "cmw25j3mf00139zx0w4tajswr",
+      "imageAttachmentId": "cmw3j3s6i00239zzls4z7bddt",
+      "type": "LOCATION",
+      "caption": "Расположение в яндекс картах",
+      "sortOrder": 9
+    },
+    {
+      "id": "cmw3mvrur00ab9zzlcxc8ag37",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25neu2001d9zx04aokz3kb",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3mvrur00ac9zzlbxedx4i6",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25nhfw001f9zx0i61cdwvi",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3mvrur00ad9zzl4wfaj3n6",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25npvp001h9zx05zmbg4he",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3mvrur00ae9zzld8a0oyzh",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25nx1v001j9zx09pk1375q",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3mvrur00af9zzl122odm98",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25o0k4001l9zx05380igwg",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 4
+    },
+    {
+      "id": "cmw3mvrur00ag9zzl69aixeto",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25o561001n9zx0qsqhcnmj",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 5
+    },
+    {
+      "id": "cmw3mvrur00ah9zzllwj93g26",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25o941001p9zx0w96x74cc",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 6
+    },
+    {
+      "id": "cmw3mvrur00ai9zzlm16st93p",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw25oc6o001r9zx0a73z5h8r",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 7
+    },
+    {
+      "id": "cmw3mvrur00aj9zzly44z7b7u",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw3m5xcu007v9zzl7t884g8e",
+      "type": "LOCATION",
+      "caption": "Вход в школу",
+      "sortOrder": 8
+    },
+    {
+      "id": "cmw3mvrur00ak9zzlddizx3lk",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw3m5rrz007t9zzlk6ji6803",
+      "type": "LOCATION",
+      "caption": "Основное здание",
+      "sortOrder": 9
+    },
+    {
+      "id": "cmw3mvrur00al9zzl3blgf5jk",
+      "partnerId": "cmw25oipj001t9zx0vq9q9qwv",
+      "imageAttachmentId": "cmw3mvdc200aa9zzl4kk8msvy",
+      "type": "LOCATION",
+      "caption": "Расположение на яндекс картах",
+      "sortOrder": 10
+    },
+    {
+      "id": "cmw3mteam009w9zzld3xs4ktj",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25q4i600239zx04f8lci0p",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3mteam009x9zzl0cch7sjw",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25q8hq00259zx000ssjb3d",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3mteam009y9zzlq46gtl6x",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25qlrh00279zx00m22yzrk",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3mteam009z9zzl9t91zbvo",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25ra0a00299zx007wbrosz",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3mteam00a09zzlhk7ftaya",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25rg6x002b9zx0bl4zkbwh",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 4
+    },
+    {
+      "id": "cmw3mteam00a19zzlu381oms5",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25rudz002d9zx07ww25tgp",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 5
+    },
+    {
+      "id": "cmw3mteam00a29zzlprkzsqy1",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw25s05z002f9zx0l3wv5mdy",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 6
+    },
+    {
+      "id": "cmw3mteam00a39zzlycokwaj9",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw3mrfy1009k9zzlkw184akz",
+      "type": "LOCATION",
+      "caption": "Расположение на яндекс картах",
+      "sortOrder": 7
+    },
+    {
+      "id": "cmw3mteam00a49zzlyky6kg68",
+      "partnerId": "cmw25syoa002h9zx0s0ps6fez",
+      "imageAttachmentId": "cmw3msjao009m9zzl5kybb9pm",
+      "type": "LOCATION",
+      "caption": "Основное здание",
+      "sortOrder": 8
+    },
+    {
+      "id": "cmw3nbrjo00bj9zzl7e68vnqy",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25ufom002q9zx0zgue51tk",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3nbrjo00bk9zzlj99arw2t",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25uio2002s9zx0pmud2scn",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3nbrjo00bl9zzliiw1cssj",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25umt4002u9zx0nf3ryo1o",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3nbrjo00bm9zzl59cb3duk",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25ur9r002w9zx0nau1noqb",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3nbrjo00bn9zzld77wgp7c",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25uwnm002y9zx0cl7d390x",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 4
+    },
+    {
+      "id": "cmw3nbrjo00bo9zzlho1scap0",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25v8rl00309zx0qa37rvoa",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 5
+    },
+    {
+      "id": "cmw3nbrjo00bp9zzlkn6i036u",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw25viul00329zx0r2g1288f",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 6
+    },
+    {
+      "id": "cmw3nbrjo00bq9zzl3lklhgxu",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw3nabmo00bg9zzleentxvwy",
+      "type": "LOCATION",
+      "caption": "Расположение в яндекс картах",
+      "sortOrder": 7
+    },
+    {
+      "id": "cmw3nbrjo00br9zzlacro0q6r",
+      "partnerId": "cmw25vsnp00349zx0lqaqfbfc",
+      "imageAttachmentId": "cmw3naevk00bi9zzlxsjqx8nv",
+      "type": "LOCATION",
+      "caption": "Вход",
+      "sortOrder": 8
+    },
+    {
+      "id": "cmw3n70l300b39zzl5y5bkurw",
+      "partnerId": "cmw25xvsc003l9zx0glp1zczo",
+      "imageAttachmentId": "cmw25xepe003d9zx087avrj7v",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw3n70l300b49zzleeauwuwt",
+      "partnerId": "cmw25xvsc003l9zx0glp1zczo",
+      "imageAttachmentId": "cmw25xhzj003f9zx0t7fimt5t",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 1
+    },
+    {
+      "id": "cmw3n70l300b59zzlksvqoplo",
+      "partnerId": "cmw25xvsc003l9zx0glp1zczo",
+      "imageAttachmentId": "cmw25xll4003h9zx0tu3ce1hb",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 2
+    },
+    {
+      "id": "cmw3n70l300b69zzl9exiu2qq",
+      "partnerId": "cmw25xvsc003l9zx0glp1zczo",
+      "imageAttachmentId": "cmw25xr3h003j9zx0yvmsbutj",
+      "type": "CONTRACT",
+      "caption": "",
+      "sortOrder": 3
+    },
+    {
+      "id": "cmw3n70l300b79zzl9knbh8gu",
+      "partnerId": "cmw25xvsc003l9zx0glp1zczo",
+      "imageAttachmentId": "cmw3n6gey00b29zzlxgs6cnop",
+      "type": "LOCATION",
+      "caption": "Расположение в яндекс картах",
+      "sortOrder": 4
+    }
+  ],
+  "images": [
+    {
+      "id": "cmw24eu5400099zefcf5vujtf",
+      "pageId": "main",
+      "fileName": "2357403bc0fcecfe852cb9b28623c58f0741b89f31274876ac70002449961e3f.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24ewi6000b9zefmssyv1up",
+      "pageId": "main",
+      "fileName": "359b7dfd17c06edca0686fa908033e43a05ec9b85643e840f1ffc59d8a352c8b.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24ezdg000d9zefwiw6vpg5",
+      "pageId": "main",
+      "fileName": "4ab3edc13c9a9f4f868e3018982562d8aee0511321a03cdc9f5dd20057456c88.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24f2cr000f9zef61kzz85w",
+      "pageId": "main",
+      "fileName": "4f89efff2a62d281a5eb3d05c14aa37ce96b1cf8d754880b091e08d5191aaf3b.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24f3xp000h9zefurqduqq6",
+      "pageId": "main",
+      "fileName": "66cbe1e07d973fb9feaa9f587ceee31c6b2214314a9035a1ccd77957cc9f6631.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24f5w5000j9zefld5zme4i",
+      "pageId": "main",
+      "fileName": "28808d95911392f901718858441449ad1c39879a0d070a74b44849957b3a97dc.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24f8b0000l9zefxswf17pf",
+      "pageId": "main",
+      "fileName": "44b9fe794946de1053f9dd62354827b6a0b59d0b759051d03af0f7b24d983487.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24fat3000n9zefo2l2m1mk",
+      "pageId": "main",
+      "fileName": "4989bdb697fd2c18681cadb13198adc592600a9a1c2297a2ce9999e889752fe5.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24i8gu00019zx05mcilrti",
+      "pageId": "main",
+      "fileName": "4ef3acc4a6dee9d1ea81a871a53238deb61cc009b92c3ac82c746a8ed8cc41f0.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw24pl5e00059zx01q1cniiq",
+      "pageId": "main",
+      "fileName": "f44c4e60a4db43848066ffcf1c630591b2a4fcf9905f608901331ef94866e376.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25gvje000n9zx005ch0r2h",
+      "pageId": "main",
+      "fileName": "5dcac6bb6971abde728228a022e4107d51155f06e3970f8e8dc5a4416f492647.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25gyp2000p9zx046y3e8yr",
+      "pageId": "main",
+      "fileName": "564ec429ed2f5d495cf910353d121ec8b3cc35716827d07471914edb0b9a0c80.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25hdqi000r9zx0bqln4x3f",
+      "pageId": "main",
+      "fileName": "a12190563d95bc0fb86d50a792f579560b7a9b41cd3296deb61414d2d42b4453.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25hg3b000t9zx0wfjbvibz",
+      "pageId": "main",
+      "fileName": "c9e0096e2cd2e393992fc0bb75c7d4aa7709a9901850e930766b965597e86944.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25hixk000v9zx02u0vydl2",
+      "pageId": "main",
+      "fileName": "f7d329b052b4fc49b9dbc70776cfd166f9a6691e7eda270d115de3f6deff9326.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25hrpy000x9zx0m2ekdesr",
+      "pageId": "main",
+      "fileName": "1682da9ab196c6bc6c1a8c4f8b6f7aeb5749111ca27c683c281a6080453abdd9.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25i8og000z9zx0v41cjhvk",
+      "pageId": "main",
+      "fileName": "dedf86b47c404b37c638863f1d9cb3319ac1da24658e68876d3c2887d35628a0.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25il7300119zx0pd87y6ag",
+      "pageId": "main",
+      "fileName": "60a8b01475084de45491653318d1dd7daf767657344b5a60cd42ef48ea2271ca.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25neu2001d9zx04aokz3kb",
+      "pageId": "main",
+      "fileName": "ca9f3833d09db173e3f8941c17196170b50950f9ca41f8dc9e9d8ddf98456c94.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25nhfw001f9zx0i61cdwvi",
+      "pageId": "main",
+      "fileName": "1aa0337a486bcde3661fa49a7cc028d90675398bcaa0da79d07a9ddf4a9f3655.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25npvp001h9zx05zmbg4he",
+      "pageId": "main",
+      "fileName": "3862a7cdf214e54969c8d9f23fb7ed45edef109d8b05bbe71857a41329ff2b84.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25nx1v001j9zx09pk1375q",
+      "pageId": "main",
+      "fileName": "004931077f66b86ee816db94932452b2678024ea7e8d3240d1717fcb464f10db.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25o0k4001l9zx05380igwg",
+      "pageId": "main",
+      "fileName": "6565493af7d5bcc2b429378b54f2ab176e5128d0cf57dbde33f22e4bb51a6c46.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25o561001n9zx0qsqhcnmj",
+      "pageId": "main",
+      "fileName": "1ca7ea71cc693460a4ea51d1fb6565fefd7b7176a59b247d4cc644ebf24f9a52.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25o941001p9zx0w96x74cc",
+      "pageId": "main",
+      "fileName": "dd697bc8dd76005eb01d2c7cff694ce1c015c7654f0431bd0f9b143755dfbacf.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25oc6o001r9zx0a73z5h8r",
+      "pageId": "main",
+      "fileName": "a088881ca872cbf6a7848c9a9f4e9f417997ecef5a8634d32f7c50a18595c4c7.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25q4i600239zx04f8lci0p",
+      "pageId": "main",
+      "fileName": "8c978f94dd193b38ba99eef879ce40cf3d1f9dd883d635dcfad32f4e2d871955.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25q8hq00259zx000ssjb3d",
+      "pageId": "main",
+      "fileName": "a8dea25c0b1176b0bed569ee3eca7f1956bef4e55427a3d729ba2e628f245d1a.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25qlrh00279zx00m22yzrk",
+      "pageId": "main",
+      "fileName": "a9bb61b25576d356589e3c02d3c089b30be98aff3041903d77e0be42b0c36ab2.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25ra0a00299zx007wbrosz",
+      "pageId": "main",
+      "fileName": "e1e4e530e37bd5d45f36b73d085d94f956a473daf3747c5ff4a95066cbf74071.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25rg6x002b9zx0bl4zkbwh",
+      "pageId": "main",
+      "fileName": "89e84e202ae06f2830da3a2b53fd79c302ad238e1cab570a08294b784b6dc48a.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25rudz002d9zx07ww25tgp",
+      "pageId": "main",
+      "fileName": "bac8a8fbae2111a5e2f0c0b9cd092b738b68b1373059d0286819544ddaf5cdcc.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25s05z002f9zx0l3wv5mdy",
+      "pageId": "main",
+      "fileName": "a2126452ff54844cf37c523beaa267d0190b655606a90af3366054581a4b2f2b.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25ufom002q9zx0zgue51tk",
+      "pageId": "main",
+      "fileName": "fbe1ddc74469eeef95efbcc05dfd4790acc0a2a89c937e6a81c3b071354b43b4.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25uio2002s9zx0pmud2scn",
+      "pageId": "main",
+      "fileName": "f58e8736f2a3fb91fd0f5aaa073adc2d437250c1ce2e0f13491f8fced406001a.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25umt4002u9zx0nf3ryo1o",
+      "pageId": "main",
+      "fileName": "70cbce24e1c204a38f1ed2d0ef9f38c7ad7d7cb229d30dff7c679995389df939.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25ur9r002w9zx0nau1noqb",
+      "pageId": "main",
+      "fileName": "3cc1c63e7e519f6650e48293fff64ca81d73add46826e99ac8f8390aa84d0bbd.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25uwnm002y9zx0cl7d390x",
+      "pageId": "main",
+      "fileName": "e7b9107278e7aa36465d89b46d9cc28a4655191f6b3aed05dab71201cee02697.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25v8rl00309zx0qa37rvoa",
+      "pageId": "main",
+      "fileName": "8c8261b4755cace7781fbd7210374978b80f0d9e47e273d3b9ed83fbe513ba6e.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25viul00329zx0r2g1288f",
+      "pageId": "main",
+      "fileName": "95ce344c190c5e5bcfcbd47a8b9ede9a1a9387d30d6e3dc4746f0ccffc079c17.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25xepe003d9zx087avrj7v",
+      "pageId": "main",
+      "fileName": "02f753094a68e8f123fab6c08e404fa83f42650f2cd8fabffd1d256e961d8e70.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25xhzj003f9zx0t7fimt5t",
+      "pageId": "main",
+      "fileName": "2a4670fb0a3e699c5fda8562ab6e0042d1cf2bc6864a7687cd05d550139b4329.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25xll4003h9zx0tu3ce1hb",
+      "pageId": "main",
+      "fileName": "918cfe20b5ecce8a125b2f2997ed8d8b1ede233498280da4a70e64323d95a680.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw25xr3h003j9zx0yvmsbutj",
+      "pageId": "main",
+      "fileName": "b4e1c1b174f3bdf3db7c1ceffec5dc42553ed86453a08ce44571435a01de8448.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3j1m4300219zzlh63w700t",
+      "pageId": "main",
+      "fileName": "e0cfbe4124cd954278ceb15b2402d0fedd981f6ac8302c50b026ede0004ad824.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3j3s6i00239zzls4z7bddt",
+      "pageId": "main",
+      "fileName": "0336b34f0ace79d5d713ee13eb188600402d16699be93ad9f484bab9503fd993.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3m5rrz007t9zzlk6ji6803",
+      "pageId": "main",
+      "fileName": "f34aea801b8e194c78d83b13bf29a55c4862396c5e5520fecc1fc5ff6dcaa4ca.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3m5xcu007v9zzl7t884g8e",
+      "pageId": "main",
+      "fileName": "d3bedba26f38762896287f55dc67485041857245aa2aa4946bb86c1a35576963.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3mrfy1009k9zzlkw184akz",
+      "pageId": "main",
+      "fileName": "bafdac5b442c79a2a491377f21289d16c0ce3d68e626bbbf4305b12b8b9755cb.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3msjao009m9zzl5kybb9pm",
+      "pageId": "main",
+      "fileName": "e5128952031aedb20e1129df52f2de571c33780a4f024ca2005b6ad94f740e44.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3mvdc200aa9zzl4kk8msvy",
+      "pageId": "main",
+      "fileName": "c200f5aa1451b31e46f450895d0af4d652c468ebf42571f4a144fc23ff571f2c.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3n6gey00b29zzlxgs6cnop",
+      "pageId": "main",
+      "fileName": "e111c9d7d1dac94bd00eb2976ce4a570ff58dd91e4d080b4682756b4287beade.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3nabmo00bg9zzleentxvwy",
+      "pageId": "main",
+      "fileName": "5d6b14b3dc8c0b72484b40b62084f15d204df5e1448fa2decd2c36f99e99292d.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw3naevk00bi9zzlxsjqx8nv",
+      "pageId": "main",
+      "fileName": "3412528f19d29c2242d931657c7e1877120accb6db994ba193e4676376499d9a.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6gzwfk00go9zr9hd2zxla8",
+      "pageId": "main",
+      "fileName": "dde9264fe0dcc4c26d603c189943ff128bed64f5b73b91afd41dfa7eb923f084.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6h692700gq9zr97w20rt0a",
+      "pageId": "main",
+      "fileName": "5afac0cf6b465d1f009bfb5382633662553017f98ae73e8dc3ea036fbaef0e35.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6hbmk500gs9zr96979sd04",
+      "pageId": "main",
+      "fileName": "51434d7dda7deabe2092875867eba5508cdecbb9694cbeb0db4b774acd06a302.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6hgzra00h49zr901xlruh5",
+      "pageId": "main",
+      "fileName": "31073205d5d71a88a81a12ead4dbf03565c8462332d277a6e1b9e6d1b6e9a493.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6hkfp400h89zr9oga0c8xa",
+      "pageId": "main",
+      "fileName": "b1eca5d18de039037f2f8fc17c43245af624378297a9ca717eeb8721eda0b65c.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "cmw6r183t00ld9zr9i5yks9ql",
+      "pageId": "main",
+      "fileName": "f1ff6abc9905a49e58caa870bf828ea102548602938466b9ddb4a2565c98c618.jpg",
+      "mimeType": "image/jpeg"
+    }
+  ],
+  "documents": [
+    {
+      "id": "cmw6ieva700hu9zr966x9tj4n",
+      "title": "ВАЙБ: Описание для партнёров",
+      "description": "",
+      "category": "Общее",
+      "status": "PUBLISHED",
+      "sortOrder": 0,
+      "fileName": "5d9cbe423d7f38bfee163aba338c5c92b0037152f9c78adb463ad80704696dae.pdf",
+      "originalName": "ОПИСАНИЕ ПРОЕКТА ДЛЯ ПАРТНЕРОВ.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 236910,
+      "publishedAt": 1794062370646
+    },
+    {
+      "id": "cmw6iacmo00hr9zr9gmjumzhy",
+      "title": "ВАЙБ: Техническая часть",
+      "description": "",
+      "category": "Общее",
+      "status": "PUBLISHED",
+      "sortOrder": 1,
+      "fileName": "931060da3b27e5fe9f53b9bfcfcef92b368c289032b8fae69205adc22a7fc96d.pdf",
+      "originalName": "ВАЙБ_Техническая_часть_актуальная.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 55662,
+      "publishedAt": 1794062377724
+    },
+    {
+      "id": "cmw6icu0300ht9zr9ir0y0doh",
+      "title": "ВАЙБ: Партнерство",
+      "description": "",
+      "category": "Общее",
+      "status": "PUBLISHED",
+      "sortOrder": 2,
+      "fileName": "7c15c6c1e570a8f1b8d7bbeceb18f078d5b9ebd16f7891cc71c7b2a23d0b3751.pdf",
+      "originalName": "ПАРТНЕРСТВО.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 43775,
+      "publishedAt": 1794062378402
+    },
+    {
+      "id": "cmw6ibuqv00hs9zr9fa3axu0z",
+      "title": "ВАЙБ: Проблематика",
+      "description": "",
+      "category": "Общее",
+      "status": "PUBLISHED",
+      "sortOrder": 3,
+      "fileName": "6dd00a636cd818b96369e4b3536db492db8e1c40c5c05114bf9203c21fb1e3fa.pdf",
+      "originalName": "ПРОБЛЕМЫ.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 39342,
+      "publishedAt": 1794062375837
+    }
+  ],
+  "faq": [
+    {
+      "id": "cmw227qew00029z0xq75a1dez",
+      "question": "Почему ВАЙБ соответствует направлению \"Арена развлечений\"?",
+      "answer": "В основу ВАЙБа легла трёхуровневая модель геймификации Кевина Вербаха и Дэна Хантера.* Она представляет собой:\n\n* Динамики — абстрактный уровень эмоций, нарратива и отношений, задающий общую драматургию пользовательского опыта.\n\n* Механики — процессы, вовлекающие пользователя: награды, статусы, сотрудничество, соревнование.\n\n* Компоненты — конкретные осязаемые элементы: очки, бейджи, таблицы лидеров, аватары и квесты.\n\nКаждый из этих уровней был реализован в проекте ВАЙБ.\n\n* Динамики — личный прогресс, развитие пользователя, общая история, смысл происходящего, социальные связи.\n\n* Механики — испытания, вознаграждения, серии действий (стрики), задания.\n\n* Компоненты — Эйнштейны, уровни, значки, яркий визуал, игровой дизайн.\n\nВсе элементы уровней направлены на дополнение друг друга и формирование устойчивой мотивации пользователей. Это соответствует теории самодетерминации, согласно которой внутренняя мотивация зависит от удовлетворения трёх потребностей: автономии, компетентности и социальной взаимосвязанности.**\n\nИсследования пользовательской вовлечённости показывают, что наиболее интенсивный отток пользователей ряда цифровых приложений происходит в первые 3–7 дней использования.*** При этом эффективная геймификация позволяет поддерживать интерес посредством системы прогресса, вознаграждений и социальных взаимодействий.****\n\nТаким образом, ВАЙБ соответствует направлению «Арена развлечений», поскольку в его основе лежит один из главных принципов данного направления — формирование интереса и вовлечённости посредством геймификации.*****\n\nИсточники:\n\n* (Источник 1) Werbach K., Hunter D. Вовлекай и властвуй. Игровое мышление на службе бизнеса. — Москва: Манн, Иванов и Фербер, 2015.\n\n** (Источник 2) Ryan R. M., Deci E. L. Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being // American Psychologist. — 2000. — Vol. 55, № 1. — P. 68–78. DOI: 10.1037/0003-066X.55.1.68.\n\n*** (Источник 3) Kidman P. G. et al. When and Why Adults Abandon Lifestyle Behavior and Mental Health Mobile Apps: Scoping Review // Journal of Medical Internet Research. — 2024. — Vol. 26. — Art. e56897. DOI: 10.2196/56897.\n\n**** (Источник 4) Hamari J., Koivisto J., Sarsa H. Does Gamification Work? A Literature Review of Empirical Studies on Gamification // Proceedings of the 47th Hawaii International Conference on System Sciences. — 2014. — P. 3025–3034. DOI: 10.1109/HICSS.2014.377.\n\n***** (Источник 5) Deterding S. et al. From Game Design Elements to Gamefulness: Defining Gamification // Proceedings of the 15th Academic MindTrek Conference. — 2011. — P. 9–15. DOI: 10.1145/2181037.2181040.",
+      "category": "Конкурс",
+      "isFeatured": 1,
+      "isPublished": 1,
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw22j98500059z0xx6g308fi",
+      "question": "Чем отличается ВАЙБ от стандартных образовательных платформ?",
+      "answer": "В основе проекта лежит проблема, с которой сталкивается значительная часть образовательной среды: потеря интереса к обучению, недостаток мотивации, эмоциональная перегрузка и отсутствие понимания практической ценности собственных усилий.\n\nМы не стали создавать ещё одну образовательную платформу с электронными заданиями, оценками и контролем успеваемости. Вместо этого мы разработали систему, в которой ученик получает возможность видеть собственный прогресс, самостоятельно выбирать направления развития и получать признание за реальные достижения.\n\nВАЙБ объединяет учебную деятельность, фиксацию результата, вознаграждение и закрепление в единую систему. За свои усилия ученик получает внутреннюю валюту — Эйнштейны, развивает личный уровень и открывает новые возможности. Накопленные Эйнштейны можно обменивать на реальные бонусы, сертификаты, образовательные продукты и предложения партнёров.\n\nВажнейшее отличие ВАЙБ — отказ от прямого сравнения пользователей. В системе нет рейтингов и гонки за социальным статусом: каждый развивается в собственном темпе, а главным показателем становится личный прогресс. Это позволяет перенести акцент с конкуренции на поддержку, достижения и индивидуальные возможности.\n\nТакой подход имеет научное обоснование. Теория самодетерминации Ричарда Райана и Эдварда Деси выделяет три фундаментальные потребности, необходимые для формирования внутренней мотивации: автономию, компетентность и социальную взаимосвязанность.* ВАЙБ реализует их через свободу выбора активностей, систему личного прогресса и взаимодействие учеников, учителей, образовательных организаций и партнёров.\n\nДополнительным основанием выступают исследования эффективности геймификации. В частности, анализ Дж. Хамари и соавторов показывает, что игровые механики способны положительно влиять на вовлечённость, однако прямые рейтинги дают неоднородный результат: они могут мотивировать лидеров, одновременно снижая активность участников с низкими позициями.** Поэтому мы сделали ставку на индивидуальные достижения и поддержку вместо постоянного соревнования.\n\nНаконец, ВАЙБ не ограничивается виртуальными наградами. Благодаря партнёрской экосистеме пользователь может преобразовать свои достижения в реальные возможности: скидки, сертификаты, образовательные продукты, культурные события и другие преимущества.\n\nМы создаём не просто приложение для повышения успеваемости. Мы создаём среду, в которой усилия ученика становятся заметными, развитие — осмысленным, а достижения — ценными не только на экране, но и за его пределами.\n\nИменно поэтому ВАЙБ — это больше, чем система мотивации. Это экосистема личного прогресса, в которой каждый может расти в собственном темпе и получать за свои действия реальные возможности.\n\n\nИсточники:\n\n*Deterding, S., Dixon, D., Khaled, R., Nacke, L. (2011). From Game Design Elements to Gamefulness: Defining Gamification. Proceedings of the 15th International Academic MindTrek Conference, pp. 9–15.\nDOI: https://doi.org/10.1145/2181037.2181040⁠\n\n**Hamari, J., Koivisto, J., Sarsa, H. (2014). Does Gamification Work? A Literature Review of Empirical Studies on Gamification. Proceedings of the 47th Hawaii International Conference on System Sciences, pp. 3025–3034.\nDOI: https://doi.org/10.1109/HICSS.2014.377⁠",
+      "category": "Конкурс",
+      "isFeatured": 1,
+      "isPublished": 1,
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw239cwd00069z0xvuu4q2hg",
+      "question": "Почему сотрудничество с ВАЙБ выгодно партнёрам?",
+      "answer": "Сотрудничество с ВАЙБ позволяет организациям представить свои товары, услуги и специальные предложения аудитории школьников и их семей. Карточка партнёра на платформе может содержать описание организации, фотографии, информацию о предложениях и местоположении, повышая её узнаваемость среди пользователей.\n\nУчастие в программе даёт возможность привлекать внимание потенциальных клиентов с помощью скидок, бонусов и специальных условий. Исследование Bain & Company, опубликованное в Harvard Business Review, показало, что 63% опрошенных американских потребителей учитывают программы лояльности при принятии решений о покупке.* Это указывает на потенциальную ценность подобных инструментов для бизнеса, хотя результат зависит от качества самой программы.\n\nВАЙБ также создаёт основу для долгосрочного взаимодействия с аудиторией: пользователь получает дополнительную выгоду, а партнёр — возможность познакомить его со своей организацией и предложениями. При наличии соответствующей аналитики эффективность сотрудничества можно оценивать по просмотрам карточки, переходам и использованию предложений.\n\nТаким образом, партнёрство с ВАЙБ — это дополнительный канал продвижения, возможность повысить узнаваемость организации и привлечь новых клиентов. \n\nИсточники:\n* Burns, M., Pierce, A., Abdel Motaal, B. (2024). Why Loyalty Programs Fail. Harvard Business Review, 13 сентября 2024 года. В статье приведены результаты опроса Bain & Company и ROI Rocket среди почти 870 потребителей из США.",
+      "category": "Конкурс",
+      "isFeatured": 1,
+      "isPublished": 1,
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw23ph9v00079z0xud7y1ivo",
+      "question": "Какую ценность несёт проект ВАЙБ для государства?",
+      "answer": "ВАЙБ может стать дополнительным инструментом поддержки образовательной вовлечённости школьников. Проект объединяет учебные, спортивные, творческие и общественные достижения в одной системе, помогая замечать и поощрять активность за пределами обычной школьной оценки. Метаанализ 137 исследований с участием более 158 тысяч человек выявил связь вовлечённости учащихся с академическими достижениями и субъективным благополучием.*\n\nПри развитии аналитических функций ВАЙБ сможет предоставлять обобщённую информацию об участии школьников в различных мероприятиях и динамике их активности. Такие сведения могут помочь образовательным организациям и органам управления образованием лучше понимать интересы учащихся и оценивать востребованность инициатив. OECD отмечает, что сбор и анализ информации о прогрессе учеников могут помогать педагогам адаптировать обратную связь и образовательный процесс к их потребностям.**\n\nПроект также способен укреплять взаимодействие между школами, образовательными, спортивными, культурными и коммерческими организациями. Это создаёт дополнительные возможности для знакомства школьников с местными инициативами и доступными направлениями развития.\n\nОтдельное направление развития ВАЙБ — содействие внедрению цифрового рубля в образовательную сферу. Предлагаемая модель строится на связке «ученик — партнёр — государство»: ученик использует накопленные Эйнштейны для получения товара, услуги или скидки у партнёра, а ВАЙБ фиксирует погашение баллов. В рамках специально созданной и профинансированной государственной программы уполномоченный орган сможет перечислять партнёру согласованную компенсацию в цифровых рублях. Полученные средства партнёр сможет использовать для дальнейших расчётов и переводов, поддерживая обращение цифрового рубля.****\n\nТакая модель может стать дополнительным практическим сценарием использования цифрового рубля в образовательной среде. Федеральное казначейство уже обеспечивает возможность проведения ряда бюджетных платежей в цифровых рублях, что создаёт основу для дальнейшего развития подобных механизмов.***** При этом Эйнштейны остаются внутренними баллами ВАЙБ и не являются денежной единицей: цифровые рубли выпускает Банк России, а их перечисление партнёрам потребует отдельного правового, финансового и технического оформления.****\n\nЦифровые образовательные решения также должны учитывать доступность и равные возможности. UNESCO подчёркивает, что технологии могут как расширять доступ к образованию, так и усиливать неравенство, если интересы менее защищённых групп учащихся не учитываются.*** Поэтому развитие ВАЙБ должно сопровождаться вниманием к доступности платформы, защите персональных данных и недопущению цифрового неравенства.\n\nТаким образом, ценность ВАЙБ для государства заключается в потенциале поддержки вовлечённости школьников, более целостного учёта их активности, развития связей между образовательной средой и местными организациями, а также создания нового сценария применения цифрового рубля. Реальный эффект проекта необходимо оценивать на практике — например, через пилотное внедрение и анализ результатов.\n\nИсточники\n\n* Wong, Z. Y., Liem, G. A. D., Chan, M., Datu, J. A. D. (2024). Student Engagement and Its Association with Academic Achievement and Subjective Well-Being: A Systematic Review and Meta-Analysis. Journal of Educational Psychology, 116(1), 48–75. В обзоре рассмотрены 137 исследований с участием 158 510 человек. https://eric.ed.gov/?id=EJ1407689\n\n** OECD (2025). Unlocking High-Quality Teaching. OECD Publishing. https://doi.org/10.1787/f5b82176-en\n\n*** UNESCO (2023). Global Education Monitoring Report 2023: Technology in Education — A Tool on Whose Terms? https://www.unesco.org/gem-report/en/publication/technology\n\n**** Банк России (2026). Цифровой рубль: что это такое и как им пользоваться. Обновлено 1 сентября 2026 года. Официальная информация об эмиссии цифрового рубля, счетах граждан и организаций и работе платформы. https://www.cbr.ru/faq/dr/\n\n***** Федеральное казначейство России (2026). Заместитель руководителя Федерального казначейства рассказала о поэтапном внедрении цифрового рубля в бюджетные платежи. 10 марта 2026 года. https://roskazna.gov.ru/press/376244",
+      "category": "Конкурс",
+      "isFeatured": 1,
+      "isPublished": 1,
+      "sortOrder": 0
+    },
+    {
+      "id": "cmw2411c900089z0xozznfgrc",
+      "question": "Что представляют собой Эйнштейны и по каким принципам будет определяться их стоимость?",
+      "answer": "Эйнштейны — внутренняя расчётная единица проекта ВАЙБ, предназначенная для поощрения активности и фиксации достижений участников. Школьники смогут получать их за подтверждённые учебные, спортивные, творческие, общественные и другие достижения. Эйнштейны являются одним из игровых элементов геймифицированной системы, которая переносит механики игрового дизайна в образовательную среду.**\n\nНа данный момент фиксированный курс Эйнштейнов не сформирован. Поэтому пока нельзя утверждать, что один Эйнштейн равен определённому количеству рублей или имеет постоянную денежную стоимость. Важно разделять два процесса: начисление Эйнштейнов за активность и их расходование на предложения партнёров.\n\nПредполагается, что система начисления будет учитывать значимость и сложность активности, а стоимость предложений — их содержание, ценность для школьника и условия, согласованные с партнёром. Таким образом, количество Эйнштейнов, необходимое для получения конкретного предложения, будет определяться после разработки правил и согласования партнёрских условий.\n\nОкончательные принципы расчёта планируется сформировать в ходе тестирования проекта. При этом система должна оставаться прозрачной и понятной: пользователь должен заранее знать, за какие действия начисляются Эйнштейны и сколько их требуется для получения выбранного предложения. Научные исследования показывают, что грамотно реализованная геймификация может положительно влиять на мотивацию учащихся, однако её эффективность зависит от конкретной реализации.*\n\nТаким образом, Эйнштейны — не реальные деньги и не цифровые рубли, а внутренняя единица учёта и поощрения в ВАЙБ. Их окончательная система начисления и обмена будет определена после тестирования и согласования условий с партнёрами.\n\nИсточники:\n* Li, L., Hew, K. F., Du, J. (2024). Gamification enhances student intrinsic motivation, perceptions of autonomy and relatedness, but minimal impact on competency: a meta-analysis and systematic review. Educational Technology Research and Development, 72, 765–796. Метаанализ 35 исследований с участием около 2500 человек выявил небольшой, но статистически значимый положительный эффект геймификации на внутреннюю мотивацию. https://doi.org/10.1007/s11423-023-10337-7⁠\n** Deterding, S., Dixon, D., Khaled, R., Nacke, L. (2011). From Game Design Elements to Gamefulness: Defining Gamification. Материалы конференции MindTrek, страницы 9–15. Работа предлагает определение геймификации как использования элементов игрового дизайна вне игрового контекста. https://doi.org/10.1145/2181037.2181040⁠",
+      "category": "Конкурс",
+      "isFeatured": 1,
+      "isPublished": 1,
+      "sortOrder": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "cmvtnlogq000m9z7ifsieyhah",
+      "slug": "accessory-mvtnlogp",
+      "scope": "GLOBAL",
+      "name": "Кошелек черный",
+      "description": "Ищете стильный и практичный аксессуар, который подчеркнет ваш статус? Классический кошелек из натуральной кожи — идеальное сочетание минимализма и функциональности. Он подойдет как мужчине, так и женщине, станет отличным подарком на день рождения, Новый год или профессиональный праздник.\n\nПочему эта модель — ваш лучший выбор: • Премиальная натуральная кожа: не трескается, не теряет цвет и красиво стареет, приобретая винтажный шарм. Мы используем только цельнозернистую кожу. • Вместительность без объема: 8 слотов для банковских и дисконтных карт, глубокое отделение для купюр и удобная монетница на мощной кнопке. • Надежный зажим для денег: плотная металлическая клипса фиксирует наличные так, что они никогда не выпадут, даже если кошелек открыт. • Защита данных: встроенный слой RFID-blocking защищает ваши карты от бесконтактного считывания и мошенников. • Идеальный размер (11х9.5х2 см): легко помещается в карман джинсов или пиджака.\n\nЭтот аксессуар решает проблему хаоса в карманах. Все необходимое — карты, наличные, монеты — будет в порядке и всегда под рукой.",
+      "category": "Аксессуар",
+      "imageKey": "accessory",
+      "price": 400,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmvtnunkc000z9z7i7vi0plqh",
+      "slug": "electronics-mvtnunkb",
+      "scope": "GLOBAL",
+      "name": "Беспроводные наушники",
+      "description": "Погрузитесь в идеальный звук без проводов и лишнего шума. Беспроводные наушники ВАЙБ с технологией активного шумоподавления (ANC) блокируют до 95% внешних звуков — от гула самолета до разговоров в офисе. Версия Bluetooth 5.3 обеспечивает мгновенное и стабильное соединение со смартфоном без задержек и разрывов на расстоянии до 15 метров.\n\nПочему эта модель решит ваши проблемы с гарнитурой: • Автономность на неделю: Полного заряда кейса хватает на 40 часов музыки. Вы забудете, где лежит зарядный кабель. Всего 15 минут быстрой зарядки в кейсе дают 2 часа воспроизведения. • Идеальная посадка: Благодаря 3 парам амбушюров в комплекте наушники сидят как влитые. Бегайте, занимайтесь в зале или гуляйте под дождем — защита IPX5 убережет электронику от влаги, а эргономика не даст гарнитуре выпасть. • Чистый звук голоса: Встроенные микрофоны с технологией ENC (Environmental Noise Cancellation) отсекают ветер во время разговора. Собеседник будет слышать вас так же четко, как если бы вы говорили в трубку. • Управление в одно касание: Сенсорная панель на каждом наушнике позволяет ставить музыку на паузу, менять громкость и вызывать голосового помощника (Siri, Алиса) без доставания телефона.\n\nЭти наушники созданы для тех, кто ценит свое время и комфорт. Они моментально подключаются к любому устройству на iOS, Android или Windows.",
+      "category": "Электроника",
+      "imageKey": "electronics",
+      "price": 1600,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmvto5p4z00129z7iwsmrbxr9",
+      "slug": "look-mvto5p4y",
+      "scope": "GLOBAL",
+      "name": "Платье женское летнее миди, хлопок 100%, рукав 3/4, белое",
+      "description": "Идеальный белый. Платье от ВАЙБ цвета первого снега или топленого молока — это база, которая никогда не выйдет из моды. Мы создали его из 100% натурального хлопка, чтобы вы чувствовали себя комфортно даже в самый знойный день, а продуманный крой избавил от главной проблемы белых вещей — прозрачности.\n\nПочему это платье станет вашим фаворитом: • Двойной хлопок: Верхняя часть платья (лиф) и рукава продублированы тонким слоем хлопка на подкладке. Вы можете надеть любое белье — телесное, белое или даже яркое — его никто не увидит. Ткань плотная, 160 г/м², она не липнет к ногам и красиво держит форму. • Эстетика деталей: Ряд из 4-х перламутровых пуговиц на спине — это не просто застежка, а самостоятельный элемент декора. V-образный вырез визуально вытягивает шею и силуэт. • Универсальность: Это хамелеон в вашем гардеробе. Днем носите его с белыми кедами и плетеной сумкой на прогулку, а вечером просто смените обувь на изящные мюли, добавьте золотые украшения — и образ готов для ресторана. • Правильная белизна: Мы отказались от оптических отбеливателей при производстве. Наш цвет — теплый молочный белый. Он не уходит в дешевую синеву и не подчеркивает покраснения кожи, в отличие от кипенно-белого",
+      "category": "Одежда",
+      "imageKey": "look",
+      "price": 25,
+      "stock": 9,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmvtoz36200159z7ixc0odzz3",
+      "slug": "look-mvtoz35x",
+      "scope": "GLOBAL",
+      "name": "Кроссовки женские белые на платформе",
+      "description": "Белые кроссовки — это база, которая работает на вас 365 дней в году. Модель [Бренд] выполнена из натуральной кожи, а не из скрипучего кожзама, который трескается после первого месяца носки. Это обувь, в которой ваши ноги будут дышать, а образ — выглядеть дорого.\n\nПочему эти кроссовки станут вашей любимой парой: • Натуральная кожа снаружи и внутри: В отличие от синтетики, кожа принимает форму вашей стопы. Никаких мозолей в первый день. Ноги не потеют благодаря перфорации по бокам, даже в +25 градусов. • Платформа 4 см: Это не грубая \"танкетка\", а скрытая платформа. Она дает рост и красивую осанку, но при этом подошва легкая (ТЭП), поэтому ноги не устают к вечеру, как от тяжелых кроссовок на массивной подошве. • Вечная классика: Эта модель не выйдет из моды. Они одинаково круто смотрятся с летящими льняными платьями, строгими костюмами, велосипедками и базовыми джинсами. Вы покупаете одну пару вместо десяти. • Усиленный задник: Пятка не заминается. Кроссовки всегда держат форму, даже если вы носите их каждый день. Шнуровка плоская, не развязывается на ходу.\n\nПроблема решена: забудьте о поиске белых кроссовок, которые не превращаются в серые через неделю. Плотная кожа легко протирается обычной влажной салфеткой, возвращая первозданную белизну за 10 секунд.",
+      "category": "Одежда",
+      "imageKey": "look",
+      "price": 3400,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0nx84g00219z5aoz7gztie",
+      "slug": "stickers-mw0nx84g",
+      "scope": "GLOBAL",
+      "name": "Портативная колонка «ВАЙБ»",
+      "description": "Прокачай свои перемены на максимум! Портативная колонка «ВАЙБ» — это мощный звук, стильный дизайн и яркая RGB-подсветка, которая подстраивается под ритм твоих любимых треков. Бери музыку с собой куда угодно: во двор, на спортивную площадку или на встречу с друзьями. Удобный радужный ремешок поможет надежно закрепить её на рюкзаке. Включай свой вайб на полную мощность!",
+      "category": "Гаджеты",
+      "imageKey": "stickers",
+      "price": 250,
+      "stock": 5,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0o6uaj002a9z5arfv8xesc",
+      "slug": "stickers-mw0o6uaj",
+      "scope": "GLOBAL",
+      "name": "Ручка многоцветная",
+      "description": "Стильная ручка для заметок, идей и важных планов. Удобно лежит в руке и помогает добавить немного ВАЙБа каждому дню. Яркий корпус и цветные чернила.",
+      "category": "Канцелярия",
+      "imageKey": "stickers",
+      "price": 30,
+      "stock": 30,
+      "perUserLimit": 3,
+      "active": 1
+    },
+    {
+      "id": "cmw0ofjsa002h9z5abbz4ct4d",
+      "slug": "stickers-mw0ofjs9",
+      "scope": "GLOBAL",
+      "name": "простой карандаш HB",
+      "description": "Удобный карандаш для заметок, набросков и свежих идей. Добавляет немного ВАЙБа учебе и творчеству.",
+      "category": "Канцелярия",
+      "imageKey": "stickers",
+      "price": 20,
+      "stock": 67,
+      "perUserLimit": 7,
+      "active": 1
+    },
+    {
+      "id": "cmw0omqvb002k9z5aq6altjr5",
+      "slug": "stickers-mw0omqva",
+      "scope": "GLOBAL",
+      "name": "Зип-худи «Вайб»",
+      "description": "Стильное оверсайз зип-худи черного цвета с фирменным градиентным логотипом «Вайб» на груди и спине. Отличный вариант для школы и повседневной жизни!",
+      "category": "Одежда",
+      "imageKey": "stickers",
+      "price": 1000,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0otdl4002r9z5a0k76urz1",
+      "slug": "stickers-mw0otdl3",
+      "scope": "GLOBAL",
+      "name": "Стильный шоппер «ВАЙБ» с ярким градиентным ремнем",
+      "description": "Прокачай свой школьный лук! Экологичный и прочный белый шоппер с мягкой текстурой и объемным карманом для бутылки. Главная фишка — регулируемый плечевой ремень с сочным радужным градиентом и карабинами. Идеально вмещает учебники, форму или личные вещи. Будь в тренде, выделяйся в коридорах школы! (Бутылка в комплект не входит).",
+      "category": "Мерч",
+      "imageKey": "stickers",
+      "price": 250,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0ox2v9002w9z5amp46p93j",
+      "slug": "stickers-mw0ox2v8",
+      "scope": "GLOBAL",
+      "name": "Магнитный повербанк «Вайб» (MagSafe + RGB-подсветка)",
+      "description": "Заряжай свой смартфон на максимум и оставайся на правильной волне! 😎 СТИЛЬНЫЙ беспроводной повербанк «Вайб» намертво крепится к задней панели телефона благодаря технологии MagSafe. Главная фишка — крутая неоновая RGB-подсветка, которая выделит тебя среди всех в классе. Больше никаких путающихся проводов в рюкзаке! Подходит для iPhone (начиная с 12-й серии) и любых смартфонов с поддержкой беспроводной зарядки (или со специальным магнитным чехлом). Количество ограничено — успей забрать свой гаджет за заработанные Эйнштейны!",
+      "category": "Гаджеты и аксессуары",
+      "imageKey": "stickers",
+      "price": 1500,
+      "stock": 5,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0ozg1z00319z5aviilnqr0",
+      "slug": "stickers-mw0ozg1y",
+      "scope": "GLOBAL",
+      "name": "Бейсболка «ВАЙБ» (черная)",
+      "description": "Стильная черная кепка с ярким градиентным патчем «ВАЙБ» на передней панели. Классический крой, регулируемый ремешок с металлической пряжкой сзади для идеальной посадки. Станет отличным дополнением к повседневному образу или школьному луку. Подчеркни свой уникальный стиль и правильный вайб в школе!",
+      "category": "Одежда",
+      "imageKey": "stickers",
+      "price": 150,
+      "stock": 10,
+      "perUserLimit": 1,
+      "active": 1
+    },
+    {
+      "id": "cmw0oztds00369z5ak5k7j6qx",
+      "slug": "stickers-mw0oztdr",
+      "scope": "GLOBAL",
+      "name": "пенал",
+      "description": "Вместительный пенал для ручек, карандашей и других нужных мелочей. Помогает держать всё под рукой и добавляет яркий ВАЙБ учёбе. Яркий дизайн, контрастная молния и удобное отделение.",
+      "category": "Канцелярия",
+      "imageKey": "stickers",
+      "price": 65,
+      "stock": 67,
+      "perUserLimit": 3,
+      "active": 1
+    },
+    {
+      "id": "cmw0p9udw003b9z5a311zay7r",
+      "slug": "stickers-mw0p9udw",
+      "scope": "GLOBAL",
+      "name": "Блокнот",
+      "description": "Удобный блокнот для заметок, планов, идей и быстрых набросков. Компактный и стильный - чтобы вдохновение всегда было под рукой.",
+      "category": "Канцелярия",
+      "imageKey": "stickers",
+      "price": 35,
+      "stock": 15,
+      "perUserLimit": 3,
+      "active": 1
+    }
+  ],
+  "productImages": [
+    {
+      "productId": "cmvtnlogq000m9z7ifsieyhah",
+      "fileName": "0663199e583e81436485af8588ce33586d5eb55685d61bbd00e8a4b6ceba2b0a.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmvtnunkc000z9z7i7vi0plqh",
+      "fileName": "5330314cda3841353c1618b7f3639113d1425bb8cc47fe1bf465d25d1a13d1e3.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmvto5p4z00129z7iwsmrbxr9",
+      "fileName": "19979e831458212c562469df9bb05e77387b292bfce47070f970206feee1a1d1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmvtoz36200159z7ixc0odzz3",
+      "fileName": "297f907601cea64367b3eaf3437488b7d3ac42dbab39513bdbaf0552200f88b4.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0nx84g00219z5aoz7gztie",
+      "fileName": "0290375d1dfed8485493faecd32bbe1182518fce78042c95de7905abd6640f4d.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0o6uaj002a9z5arfv8xesc",
+      "fileName": "751be57038949b6da06dedb189957c029b87940427aefd18acd2190f01fbc87b.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0ofjsa002h9z5abbz4ct4d",
+      "fileName": "19acddd42e03df01e4c040b052a262b99e56ad603d46b07f1fab5d5ccf8a667e.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0omqvb002k9z5aq6altjr5",
+      "fileName": "7fcbc5dae3d2ac8db7c1e984da83c8406bbd5d22e237a12f47950da47eb0168e.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0otdl4002r9z5a0k76urz1",
+      "fileName": "de4bd6195bb7e591c6eb8ea5bc0ea7cc8d414488623005ad590ef8e30550b6b7.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0ox2v9002w9z5amp46p93j",
+      "fileName": "679515f646fab5e6903f9d191b6209eb30bca089d7fc8a2bf0e7a2ac40fd2a3e.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0ozg1z00319z5aviilnqr0",
+      "fileName": "fc04c326b9bacd8c8b90f6b359152f0fc9d3f221fb469cc9c83165212a9c15d9.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0oztds00369z5ak5k7j6qx",
+      "fileName": "b08847e163f5d0e93112055a2ee207ad1650e4c9760f57b2ab2c03d2459aabff.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "productId": "cmw0p9udw003b9z5a311zay7r",
+      "fileName": "e8aff9bc32032042051d75e77717f051e01e46342c82de491c8eb7681702a2f2.jpg",
+      "mimeType": "image/jpeg"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "cmw3wv5kt00019zld4v1clwv3",
+      "title": "Первый шаг",
+      "subject": "Вайб",
+      "category": "Школьная жизнь",
+      "description": "Знакомство с Вайбом",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw3wzyhs000f9zldyapxo1yc",
+      "title": "Тестовая задача",
+      "subject": "Математика",
+      "category": "Учёба",
+      "description": "Решить задачу",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw3xi87g00189zldv014y2li",
+      "title": "Первый шаг",
+      "subject": "Вайб",
+      "category": "Школьная жизнь",
+      "description": "Знакомство с Вайбом",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw3xmo46001f9zldqltx3b90",
+      "title": "Тестовая задача",
+      "subject": "Математика",
+      "category": "Учёба",
+      "description": "Решить задачу",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw3zhpqa000b9zls1lg1tbvs",
+      "title": "Первый шаг",
+      "subject": "Вайб",
+      "category": "Школьная жизнь",
+      "description": "Знакомство с Вайбом",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw3zmqjr000i9zlsspemspzs",
+      "title": "Тестовая задача",
+      "subject": "Математика",
+      "category": "Учёба",
+      "description": "Решить задачу",
+      "durationMinutes": 10
+    },
+    {
+      "id": "cmw4xpa80000k9zx1xdaho7eb",
+      "title": "Найди пропущенную букву!",
+      "subject": "Русский язык",
+      "category": "Учёба",
+      "description": "Прочитай слово и определи, какая буква в нём пропущена.\n\nм _ локо\n\nКакая буква должна стоять на месте пропуска?\nВпиши свой ответ в поле ниже.",
+      "durationMinutes": null
+    },
+    {
+      "id": "cmw4xpa84000p9zx1xy2te72i",
+      "title": "Найди пропущенную букву!",
+      "subject": "Русский язык",
+      "category": "Учёба",
+      "description": "Прочитай слово и определи, какая буква в нём пропущена.\n\nм _ локо\n\nКакая буква должна стоять на месте пропуска?\nВпиши свой ответ в поле ниже.",
+      "durationMinutes": null
+    },
+    {
+      "id": "cmw4xpa88000u9zx1malh8g9n",
+      "title": "Найди пропущенную букву!",
+      "subject": "Русский язык",
+      "category": "Учёба",
+      "description": "Прочитай слово и определи, какая буква в нём пропущена.\n\nм _ локо\n\nКакая буква должна стоять на месте пропуска?\nВпиши свой ответ в поле ниже.",
+      "durationMinutes": null
+    }
+  ],
+  "questions": [
+    {
+      "assignmentId": "cmw3wv5kt00019zld4v1clwv3",
+      "prompt": "Добро пожаловать в ВАЙБ!\nРады видеть тебя здесь. ВАЙБ — это пространство, где твои достижения превращаются в новые возможности.\nДавай начнём знакомство! Чтобы продолжить, напиши \"1\" в знак приветствия.\nНапиши в поле ниже:",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"1\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw3wzyhs000f9zldyapxo1yc",
+      "prompt": "Реши пример, соблюдая порядок выполнения арифметических действий.\n2 + 2 × 2 = ?\nВведи полученный результат\nОтвет будет проверен автоматически.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"6\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw3xi87g00189zldv014y2li",
+      "prompt": "Добро пожаловать в ВАЙБ!\nРады видеть тебя здесь. ВАЙБ — это пространство, где твои достижения превращаются в новые возможности.\nДавай начнём знакомство! Чтобы продолжить, напиши \"1\" в знак приветствия.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"1\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw3xmo46001f9zldqltx3b90",
+      "prompt": "Реши пример, соблюдая порядок выполнения арифметических действий.\n2 + 2 × 2 = ?\nВведи полученный результат\nОтвет будет проверен автоматически.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"6\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw3zhpqa000b9zls1lg1tbvs",
+      "prompt": "Добро пожаловать в ВАЙБ!\nРады видеть тебя здесь. ВАЙБ — это пространство, где твои достижения превращаются в новые возможности.\nДавай начнём знакомство! Чтобы продолжить, напиши \"1\" в знак приветствия.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"1\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw3zmqjr000i9zlsspemspzs",
+      "prompt": "Реши пример, соблюдая порядок выполнения арифметических действий.\n2 + 2 × 2 = ?\nВведи полученный результат\nОтвет будет проверен автоматически.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"6\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw4xpa80000k9zx1xdaho7eb",
+      "prompt": "м _ локо\n\nКакая буква должна стоять на месте пропуска? Впиши свой ответ в поле ниже.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"о\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw4xpa84000p9zx1xy2te72i",
+      "prompt": "м _ локо\n\nКакая буква должна стоять на месте пропуска? Впиши свой ответ в поле ниже.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"о\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    },
+    {
+      "assignmentId": "cmw4xpa88000u9zx1malh8g9n",
+      "prompt": "м _ локо\n\nКакая буква должна стоять на месте пропуска? Впиши свой ответ в поле ниже.",
+      "type": "SHORT_TEXT",
+      "points": 1,
+      "optionsJson": "[]",
+      "acceptedJson": "[\"о\"]",
+      "tolerance": 0,
+      "ignoreCase": 1,
+      "trimWhitespace": 1,
+      "photoRequired": 0,
+      "sortOrder": 0
+    }
+  ]
+}

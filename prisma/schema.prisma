@@ -1,0 +1,801 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  TEACHER
+  SCHOOL_ADMIN
+  PROJECT_OWNER
+}
+
+enum QuestionType {
+  SHORT_TEXT
+  NUMBER
+  SINGLE_CHOICE
+  LONG_ANSWER
+}
+
+enum SubmissionStatus {
+  IN_PROGRESS
+  SUBMITTED
+  RETURNED
+  COMPLETED
+  EXPIRED
+}
+
+enum CosmeticType {
+  PROFILE_BACKGROUND
+  NICK_EMOJI
+  AVATAR_FRAME
+  PROFILE_TITLE
+  PROFILE_PATTERN
+}
+
+enum ProductScope {
+  GLOBAL
+  SCHOOL
+}
+
+enum OrderStatus {
+  RESERVED
+  FULFILLED
+  CANCELLED
+}
+
+enum LedgerKind {
+  TASK_REWARD
+  STREAK_ADJUSTMENT
+  PURCHASE
+  REFUND
+}
+
+model User {
+  id                   String               @id @default(cuid())
+  maxUserId            String?              @unique
+  maxFirstName         String?
+  maxLastName          String?
+  maxUsername          String?
+  maxAvatarUrl         String?
+  maxFullAvatarUrl     String?
+  maxLinkedAt          DateTime?
+  maxLastSyncAt        DateTime?
+  maxBotStartedAt      DateTime?
+  testProfileKey       String?              @unique
+  displayName          String?
+  firstName            String
+  lastName             String
+  middleName           String?
+  username             String?
+  city                 String?
+  avatarUrl            String?
+  platformRole         Role?
+  isBlocked            Boolean              @default(false)
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime             @updatedAt
+  memberships          Membership[]
+  sessions             Session[]
+  appearance           ProfileAppearance?
+  preferences          UserPreferences?
+  cosmeticUnlocks      CosmeticUnlock[]
+  ownedAssignments     Assignment[]
+  auditEvents          AuditLog[]           @relation("AuditActor")
+  pinnedAchievements   PinnedAchievement[]
+  uploads              Upload[]
+  productImages        ProductImage[]
+  aboutImagesUploaded  AboutImage[]
+  aboutPagesUpdated    AboutPage[]          @relation("AboutPageUpdater")
+  legalAcceptances     LegalAcceptance[]
+  legalSettingsUpdates LegalSettings[]      @relation("LegalSettingsUpdater")
+  cooperationUpdates   CooperationPartner[] @relation("CooperationPartnerUpdater")
+  submittedReviews     PublicReview[]       @relation("PublicReviewAuthor")
+}
+
+model School {
+  id          String        @id @default(cuid())
+  name        String
+  city        String
+  timezone    String        @default("Europe/Moscow")
+  archivedAt  DateTime?
+  isSynthetic Boolean       @default(false)
+  requestKey  String?       @unique
+  memberships Membership[]
+  classes     SchoolClass[]
+  products    Product[]
+  assignments Assignment[]
+  createdAt   DateTime      @default(now())
+
+  @@unique([name, city])
+  @@index([archivedAt, city, name])
+}
+
+model SchoolClass {
+  id             String             @id @default(cuid())
+  schoolId       String
+  school         School             @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  name           String
+  normalizedName String             @default("")
+  archivedAt     DateTime?
+  memberships    Membership[]
+  assignments    AssignmentTarget[]
+  teacherClasses TeacherClass[]
+
+  @@unique([schoolId, normalizedName])
+  @@index([schoolId, archivedAt])
+}
+
+model Membership {
+  id             String             @id @default(cuid())
+  userId         String
+  schoolId       String
+  classId        String?
+  role           Role               @default(STUDENT)
+  isTeacher      Boolean            @default(false)
+  isSchoolAdmin  Boolean            @default(false)
+  blockedReason  String?
+  active         Boolean            @default(true)
+  approved       Boolean            @default(true)
+  balance        Int                @default(0)
+  totalExp       Int                @default(0)
+  createdAt      DateTime           @default(now())
+  user           User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  school         School             @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  schoolClass    SchoolClass?       @relation(fields: [classId], references: [id], onDelete: SetNull)
+  ledger         LedgerEntry[]
+  submissions    Submission[]
+  activityDays   ActivityDay[]
+  achievements   Achievement[]
+  weeklyGoals    WeeklyGoal[]
+  favorites      FavoriteProduct[]
+  savingsGoal    SavingsGoal?
+  orders         Order[]
+  teacherClasses TeacherClass[]
+  assignedWork   AssignmentTarget[]
+  uploads        Upload[]
+
+  @@unique([userId, schoolId])
+  @@index([schoolId, role, active])
+}
+
+model TeacherClass {
+  id          String      @id @default(cuid())
+  teacherId   String
+  classId     String
+  active      Boolean     @default(true)
+  teacher     Membership  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  schoolClass SchoolClass @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@unique([teacherId, classId])
+}
+
+model Assignment {
+  id              String             @id @default(cuid())
+  schoolId        String
+  teacherId       String
+  title           String
+  seedKey         String?            @unique
+  subject         String
+  category        String
+  description     String
+  dueAt           DateTime?
+  durationMinutes Int?
+  published       Boolean            @default(false)
+  archived        Boolean            @default(false)
+  version         Int                @default(1)
+  answerRevealAt  DateTime?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  school          School             @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  teacher         User               @relation(fields: [teacherId], references: [id], onDelete: Restrict)
+  questions       Question[]
+  uploads         Upload[]
+  targets         AssignmentTarget[]
+  submissions     Submission[]
+
+  @@index([schoolId, published, dueAt])
+  @@index([teacherId, createdAt])
+}
+
+model AssignmentTarget {
+  id           String       @id @default(cuid())
+  assignmentId String
+  classId      String
+  assignment   Assignment   @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  schoolClass  SchoolClass  @relation(fields: [classId], references: [id], onDelete: Cascade)
+  recipients   Membership[]
+
+  @@unique([assignmentId, classId])
+}
+
+model Question {
+  id             String       @id @default(cuid())
+  assignmentId   String
+  prompt         String
+  type           QuestionType
+  points         Int          @default(1)
+  optionsJson    String       @default("[]")
+  acceptedJson   String       @default("[]")
+  tolerance      Float        @default(0)
+  ignoreCase     Boolean      @default(true)
+  trimWhitespace Boolean      @default(true)
+  photoRequired  Boolean      @default(false)
+  sortOrder      Int          @default(0)
+  assignment     Assignment   @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  answers        Answer[]
+
+  @@index([assignmentId, sortOrder])
+}
+
+model Submission {
+  id             String           @id @default(cuid())
+  assignmentId   String
+  membershipId   String
+  status         SubmissionStatus @default(IN_PROGRESS)
+  startedAt      DateTime?
+  extendedDueAt  DateTime?
+  submittedAt    DateTime?
+  checkedAt      DateTime?
+  grade          Int?
+  earnedPoints   Int?
+  maxPoints      Int?
+  teacherComment String?
+  rewardGranted  Boolean          @default(false)
+  attempt        Int              @default(1)
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  assignment     Assignment       @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  membership     Membership       @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  answers        Answer[]
+
+  @@unique([assignmentId, membershipId, attempt])
+  @@index([membershipId, status, submittedAt])
+  @@index([assignmentId, status])
+}
+
+model Answer {
+  id            String     @id @default(cuid())
+  submissionId  String
+  questionId    String
+  textValue     String     @default("")
+  fileNamesJson String     @default("[]")
+  earnedPoints  Int?
+  teacherNote   String?
+  uploads       Upload[]
+  submission    Submission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  question      Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([submissionId, questionId])
+}
+
+model LedgerEntry {
+  id                     String     @id @default(cuid())
+  membershipId           String
+  kind                   LedgerKind
+  amount                 Int
+  expAmount              Int        @default(0)
+  balanceAfter           Int
+  totalExpAfter          Int
+  referenceId            String?
+  idempotencyKey         String     @unique
+  rewardScopeKey         String?    @unique
+  rewardPolicyVersion    String?
+  rewardGradeSnapshot    Int?
+  rewardBaseAmount       Int?
+  rewardDayKey           String?
+  rewardMultiplierTenths Int?
+  rewardTargetAmount     Int?
+  note                   String
+  createdAt              DateTime   @default(now())
+  membership             Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+
+  @@index([membershipId, createdAt])
+}
+
+model ActivityDay {
+  id           String     @id @default(cuid())
+  membershipId String
+  dayKey       String
+  createdAt    DateTime   @default(now())
+  membership   Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+
+  @@unique([membershipId, dayKey])
+}
+
+model CosmeticItem {
+  id          String           @id @default(cuid())
+  slug        String           @unique
+  type        CosmeticType
+  unlockLevel Int              @default(1)
+  displayName String
+  assetKey    String
+  value       String
+  groupKey    String?
+  unlocks     CosmeticUnlock[]
+}
+
+model CosmeticUnlock {
+  id         String       @id @default(cuid())
+  userId     String
+  cosmeticId String
+  source     String
+  sourceRef  String?
+  unlockedAt DateTime     @default(now())
+  user       User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cosmetic   CosmeticItem @relation(fields: [cosmeticId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, cosmeticId])
+}
+
+model ProfileAppearance {
+  id         String   @id @default(cuid())
+  userId     String   @unique
+  background String   @default("pearl")
+  emoji      String   @default("emoji-none")
+  frame      String   @default("frame-none")
+  title      String   @default("title-none")
+  pattern    String   @default("pattern-none")
+  updatedAt  DateTime @updatedAt
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserPreferences {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  reduceTransparency Boolean  @default(false)
+  reduceMotion       Boolean  @default(false)
+  highContrast       Boolean  @default(false)
+  focusMode          Boolean  @default(false)
+  notifyTasks        Boolean  @default(true)
+  notifyOrders       Boolean  @default(true)
+  notifyProgress     Boolean  @default(false)
+  notifyCosmetics    Boolean  @default(false)
+  maxNotificationsEnabled Boolean @default(false)
+  maxNotifyNewTasks  Boolean  @default(true)
+  maxNotifyDeadlines Boolean  @default(true)
+  maxNotifyResults   Boolean  @default(true)
+  maxNotifyReturns   Boolean  @default(true)
+  maxNotifyOrders    Boolean  @default(true)
+  maxNotifySystem    Boolean  @default(true)
+  quietHoursEnabled  Boolean  @default(true)
+  quietStart         String   @default("22:00")
+  quietEnd           String   @default("08:00")
+  updatedAt          DateTime @updatedAt
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model AboutPage {
+  id          String            @id @default("main")
+  title       String
+  description String
+  updatedAt   DateTime          @updatedAt
+  updatedById String?
+  updatedBy   User?             @relation("AboutPageUpdater", fields: [updatedById], references: [id], onDelete: SetNull)
+  teamMembers AboutTeamMember[]
+  sections    AboutSection[]
+  images      AboutImage[]
+}
+
+model AboutImage {
+  id               String            @id @default(cuid())
+  pageId           String
+  uploaderId       String
+  fileName         String            @unique
+  mimeType         String
+  createdAt        DateTime          @default(now())
+  page             AboutPage         @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  uploader         User              @relation(fields: [uploaderId], references: [id], onDelete: Cascade)
+  teamMembers      AboutTeamMember[] @relation("AboutTeamImage")
+  sections         AboutSection[]    @relation("AboutSectionImage")
+  cooperationMedia CooperationMedia?
+
+  @@index([pageId, createdAt])
+  @@index([uploaderId])
+}
+
+model LegalSettings {
+  id                             String   @id @default("main")
+  organizationFullName           String?
+  organizationShortName          String?
+  legalAddress                   String?
+  location                       String?
+  inn                            String?
+  ogrn                           String?
+  generalEmail                   String?
+  privacyEmail                   String?
+  domain                         String?
+  hostingProvider                String?
+  serverLocation                 String?
+  dataPurposes                   String?
+  dataCategories                 String?
+  dataLegalBasis                 String?
+  dataRecipients                 String?
+  retentionPeriods               String?
+  childrenDataProcedure           String?
+  securityMeasures               String?
+  consentPurposes                String?
+  consentDataCategories          String?
+  consentActions                 String?
+  consentRecipients              String?
+  consentDuration                String?
+  consentRevocation               String?
+  operatorDetailsConfirmed       Boolean  @default(false)
+  childDataLegalReviewComplete   Boolean  @default(false)
+  privacyVersion                 String?
+  termsVersion                   String?
+  consentVersion                 String?
+  updatedAt                      DateTime @updatedAt
+  updatedById                    String?
+  updatedBy                      User?    @relation("LegalSettingsUpdater", fields: [updatedById], references: [id], onDelete: SetNull)
+}
+
+enum CooperationMediaType {
+  MEETING
+  CONTRACT
+  LOCATION
+  LOGO
+  COVER
+}
+
+model CooperationPartner {
+  id               String             @id @default(cuid())
+  name             String
+  category         String?
+  city             String?
+  shortDescription String
+  mapUrl           String?
+  isPublished      Boolean            @default(false)
+  isSynthetic      Boolean            @default(false)
+  sortOrder        Int                @default(0)
+  archivedAt       DateTime?
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  updatedById      String?
+  updatedBy        User?              @relation("CooperationPartnerUpdater", fields: [updatedById], references: [id], onDelete: SetNull)
+  media            CooperationMedia[]
+
+  @@index([isSynthetic, archivedAt, isPublished, sortOrder])
+}
+
+model CooperationMedia {
+  id                String               @id @default(cuid())
+  partnerId         String
+  imageAttachmentId String               @unique
+  type              CooperationMediaType
+  caption           String               @default("")
+  sortOrder         Int                  @default(0)
+  createdAt         DateTime             @default(now())
+  partner           CooperationPartner   @relation(fields: [partnerId], references: [id], onDelete: Cascade)
+  image             AboutImage           @relation(fields: [imageAttachmentId], references: [id], onDelete: Restrict)
+
+  @@index([partnerId, type, sortOrder])
+}
+
+model AboutTeamMember {
+  id                String      @id @default(cuid())
+  pageId            String
+  name              String
+  role              String
+  description       String
+  imageAttachmentId String?
+  sortOrder         Int         @default(0)
+  isVisible         Boolean     @default(true)
+  page              AboutPage   @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  image             AboutImage? @relation("AboutTeamImage", fields: [imageAttachmentId], references: [id], onDelete: Restrict)
+
+  @@index([pageId, isVisible, sortOrder])
+}
+
+model AboutSection {
+  id                String      @id @default(cuid())
+  pageId            String
+  title             String
+  body              String
+  imageAttachmentId String?
+  sortOrder         Int         @default(0)
+  isVisible         Boolean     @default(true)
+  page              AboutPage   @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  image             AboutImage? @relation("AboutSectionImage", fields: [imageAttachmentId], references: [id], onDelete: Restrict)
+
+  @@index([pageId, isVisible, sortOrder])
+}
+
+model Achievement {
+  id           String              @id @default(cuid())
+  membershipId String
+  slug         String
+  name         String
+  evidenceRef  String
+  awardedAt    DateTime            @default(now())
+  membership   Membership          @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  pinned       PinnedAchievement[]
+
+  @@unique([membershipId, slug])
+}
+
+model PinnedAchievement {
+  id            String      @id @default(cuid())
+  userId        String
+  achievementId String
+  position      Int
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@unique([userId, position])
+}
+
+model WeeklyGoal {
+  id           String     @id @default(cuid())
+  membershipId String
+  weekStart    String
+  target       Int
+  enabled      Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  membership   Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+
+  @@unique([membershipId, weekStart])
+}
+
+model Product {
+  id           String            @id @default(cuid())
+  slug         String            @unique
+  schoolId     String?
+  scope        ProductScope
+  name         String
+  description  String
+  category     String
+  imageKey     String
+  price        Int
+  stock        Int
+  perUserLimit Int               @default(1)
+  active       Boolean           @default(true)
+  isSynthetic  Boolean           @default(false)
+  createdAt    DateTime          @default(now())
+  school       School?           @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  favorites    FavoriteProduct[]
+  savingsGoals SavingsGoal[]
+  orders       Order[]
+  image        ProductImage?
+
+  @@index([scope, schoolId, active])
+}
+
+model ProductImage {
+  id         String   @id @default(cuid())
+  productId  String   @unique
+  uploaderId String
+  fileName   String   @unique
+  mimeType   String
+  createdAt  DateTime @default(now())
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  uploader   User     @relation(fields: [uploaderId], references: [id], onDelete: Cascade)
+
+  @@index([uploaderId])
+}
+
+model FavoriteProduct {
+  id           String     @id @default(cuid())
+  membershipId String
+  productId    String
+  createdAt    DateTime   @default(now())
+  membership   Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  product      Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([membershipId, productId])
+}
+
+model SavingsGoal {
+  id           String     @id @default(cuid())
+  membershipId String     @unique
+  productId    String
+  updatedAt    DateTime   @updatedAt
+  membership   Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  product      Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model Order {
+  id             String      @id @default(cuid())
+  code           String      @unique
+  idempotencyKey String      @unique
+  membershipId   String
+  productId      String
+  status         OrderStatus @default(RESERVED)
+  nameSnapshot   String
+  priceSnapshot  Int
+  termsSnapshot  String
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  membership     Membership  @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  product        Product     @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@index([membershipId, createdAt])
+  @@index([productId, status])
+}
+
+model Session {
+  id         String   @id @default(cuid())
+  tokenHash  String   @unique
+  userId     String
+  authSource String   @default("MAX")
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([expiresAt])
+}
+
+model Upload {
+  id           String      @id @default(cuid())
+  userId       String
+  membershipId String
+  answerId     String?
+  assignmentId String?
+  fileName     String      @unique
+  mimeType     String
+  expiresAt    DateTime
+  createdAt    DateTime    @default(now())
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  membership   Membership  @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  answer       Answer?     @relation(fields: [answerId], references: [id], onDelete: SetNull)
+  assignment   Assignment? @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+
+  @@index([membershipId, answerId])
+  @@index([assignmentId])
+  @@index([expiresAt])
+}
+
+model LoginChallenge {
+  id          String    @id @default(cuid())
+  code        String
+  codeHash    String?
+  browserHash String
+  maxUserId   String?
+  expiresAt   DateTime
+  confirmedAt DateTime?
+  cancelledAt DateTime?
+  consumedAt  DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([expiresAt])
+}
+
+model FaqItem {
+  id          String    @id @default(cuid())
+  question    String
+  answer      String
+  category    String    @default("Общее")
+  isFeatured  Boolean   @default(false)
+  isPublished Boolean   @default(false)
+  isSynthetic Boolean   @default(false)
+  sortOrder   Int       @default(0)
+  archivedAt  DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([isPublished, archivedAt, sortOrder])
+  @@index([category, isPublished, archivedAt])
+  @@index([isSynthetic, isPublished, archivedAt, sortOrder])
+}
+
+model ProjectDocument {
+  id            String   @id @default(cuid())
+  title         String
+  description   String   @default("")
+  category      String
+  status        String   @default("DRAFT")
+  sortOrder     Int      @default(0)
+  isSynthetic   Boolean  @default(false)
+  fileName      String   @unique
+  originalName  String
+  mimeType      String
+  sizeBytes     Int
+  publishedAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([isSynthetic, status, category, sortOrder, publishedAt])
+}
+
+model PublicReview {
+  id           String   @id @default(cuid())
+  authorId     String
+  rating       Int
+  body         String
+  status       String   @default("PENDING")
+  isSynthetic  Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  moderatedAt  DateTime?
+  author       User     @relation("PublicReviewAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([isSynthetic, status, createdAt])
+  @@index([authorId, isSynthetic, createdAt])
+}
+
+model Notification {
+  id        String    @id @default(cuid())
+  eventKey  String?   @unique
+  userId    String
+  kind      String
+  title     String
+  body      String
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Outbox {
+  id            String    @id @default(cuid())
+  dedupeKey     String    @unique
+  transport     String    @default("mock")
+  recipient     String
+  body          String
+  status        String    @default("PENDING")
+  attempts      Int       @default(0)
+  nextAttemptAt DateTime  @default(now())
+  sentAt        DateTime?
+  createdAt     DateTime  @default(now())
+
+  @@index([status, nextAttemptAt])
+}
+
+model BotEvent {
+  id         String   @id @default(cuid())
+  eventId    String   @unique
+  receivedAt DateTime @default(now())
+  status     String   @default("PROCESSED")
+}
+
+model BotMessage {
+  id        String   @id @default(cuid())
+  sourceEventId String? @unique
+  userId    String
+  direction String
+  text      String
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model BotCursor {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  actorId     String?
+  schoolId    String?
+  action      String
+  objectType  String
+  objectId    String
+  reason      String?
+  changesJson String   @default("{}")
+  createdAt   DateTime @default(now())
+  actor       User?    @relation("AuditActor", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([schoolId, createdAt])
+}
+
+model LegalAcceptance {
+  id              String    @id @default(cuid())
+  userId          String
+  documentType    String
+  documentVersion String
+  source          String
+  consentStatus   String
+  acceptedAt      DateTime  @default(now())
+  revokedAt       DateTime?
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, documentType, documentVersion])
+  @@index([userId, documentType, acceptedAt])
+}

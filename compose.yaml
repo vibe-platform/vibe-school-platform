@@ -1,0 +1,10 @@
+services:
+  vibe:
+    build: .
+    ports:
+      - "127.0.0.1:${VIBE_PORT:-3101}:3101"
+    volumes:
+      - vibe-data:/app/data
+    restart: unless-stopped
+volumes:
+  vibe-data:

@@ -1,0 +1,11 @@
+{
+  "name": "@vibe/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": { "@vibe/shared": "1.0.0" }
+}

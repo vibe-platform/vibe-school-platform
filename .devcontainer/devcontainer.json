@@ -1,0 +1,15 @@
+{
+  "name": "Вайб — конкурсная версия",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [
+    3101
+  ],
+  "portsAttributes": {
+    "3101": {
+      "label": "Вайб",
+      "onAutoForward": "openPreview",
+      "visibility": "private"
+    }
+  },
+  "postStartCommand": "docker compose up -d --build"
+}

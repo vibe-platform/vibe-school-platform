@@ -1,0 +1,86 @@
+name: Contest checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run build --workspace packages/shared
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - name: Audit dependencies
+        run: |
+          npm audit --omit=dev --audit-level=high
+          npm audit --audit-level=high
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build
+      - run: docker compose up -d --wait
+      - name: Verify frontend and profiles
+        run: |
+          curl -fsS http://127.0.0.1:3101/ > /tmp/vibe-home.html
+          curl -fsS http://127.0.0.1:3101/api/health
+          curl -fsS http://127.0.0.1:3101/api/auth/test/profiles > /tmp/vibe-profiles.json
+          node -e "const p=require('/tmp/vibe-profiles.json'); if(p.length!==4 || p.some(x=>!x.available)) process.exit(1)"
+      - name: Verify persistence
+        run: |
+          docker compose exec -T vibe sh -c 'echo persistence-check > /app/data/presentation/probe'
+          docker compose up -d --force-recreate --wait
+          docker compose exec -T vibe sh -c 'test "$(cat /app/data/presentation/probe)" = persistence-check'
+          docker compose exec -T vibe sh -c 'cd /app/data/uploads && sha256sum -c /app/contest-assets/manifest.sha256'
+          docker compose exec -T vibe node /app/scripts/check-public-content.mjs
+      - name: Verify photo replacement in existing volume
+        run: |
+          docker compose exec -T vibe node /app/scripts/test-photo-upgrade.mjs setup
+          docker compose restart
+          docker compose up -d --wait
+          docker compose exec -T vibe node /app/scripts/test-photo-upgrade.mjs verify
+      - name: Verify operation without network access
+        run: |
+          image=$(docker compose images -q vibe)
+          docker run -d --name vibe-offline --network none "$image"
+          trap 'docker logs vibe-offline; docker rm -f vibe-offline' EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if docker exec vibe-offline node -e "fetch('http://127.0.0.1:3101/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"; then ready=1; break; fi
+            sleep 2
+          done
+          test "$ready" = 1
+          docker exec vibe-offline node /app/scripts/check-public-content.mjs
+      - if: always()
+        run: docker compose logs
+      - if: always()
+        run: docker compose down -v
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run build --workspace packages/shared
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
