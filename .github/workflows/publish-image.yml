@@ -1,0 +1,43 @@
+name: Publish private contest image
+on:
+  workflow_run:
+    workflows: ["Contest checks"]
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Refuse an existing public package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          package=$(gh api --silent /users/vibe-platform/packages/container/vibe-school-platform 2>/dev/null && echo present || true)
+          if [ "$package" = present ]; then
+            visibility=$(gh api /users/vibe-platform/packages/container/vibe-school-platform --jq .visibility)
+            test "$visibility" = private
+          fi
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/vibe-platform/vibe-school-platform:contest
+      - name: Verify package visibility
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api /users/vibe-platform/packages/container/vibe-school-platform --jq .visibility | grep -x private
+          echo "Private image: ghcr.io/vibe-platform/vibe-school-platform:contest" >> "$GITHUB_STEP_SUMMARY"
