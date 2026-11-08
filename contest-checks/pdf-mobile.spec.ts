@@ -12,6 +12,9 @@ for (const width of [390, 1280]) {
     const scroller = dialog.getByLabel('Страницы документа');
     const canvas = dialog.locator('canvas').first();
     await expect(canvas).toBeVisible();
+    if (width >= 768) {
+      await expect.poll(async () => canvas.evaluate((el) => { const c = el as HTMLCanvasElement; const panel = c.closest('[aria-label="Страницы документа"]'); return c.getBoundingClientRect().height - (panel?.getBoundingClientRect().height ?? 0); })).toBeLessThanOrEqual(0);
+    }
     await expect.poll(async () => canvas.evaluate((el) => (el as HTMLCanvasElement).width)).toBeGreaterThan(100);
     await expect.poll(async () => canvas.evaluate((el) => { const c = el as HTMLCanvasElement; const ctx = c.getContext('2d'); if (!ctx) return 0; const pixels = ctx.getImageData(0, 0, c.width, c.height).data; let painted = 0; for (let i=3; i<pixels.length; i+=4) if (pixels[i]) painted++; return painted; })).toBeGreaterThan(1000);
     await expect(dialog.getByRole('button', { name: 'Вперёд' })).toHaveCount(0);

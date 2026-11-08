@@ -73,7 +73,12 @@ export function PdfViewer({ url }: { url: string }) {
   useEffect(() => {
     const element = containerRef.current;
     if (!element) return;
-    const observer = new ResizeObserver((entries) => setWidth(Math.max(200, (entries[0]?.contentRect.width ?? 320) - 24)));
+    const observer = new ResizeObserver((entries) => {
+      const rect = entries[0]?.contentRect;
+      const availableWidth = Math.max(200, (rect?.width ?? 320) - 24);
+      const fitPageWidth = Math.max(200, ((rect?.height ?? 760) - 80) / 1.414);
+      setWidth(availableWidth >= 768 ? Math.min(availableWidth, fitPageWidth) : availableWidth);
+    });
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
