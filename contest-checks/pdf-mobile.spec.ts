@@ -15,7 +15,7 @@ for (const width of [390, 1280]) {
     await expect.poll(async () => canvas.evaluate((el) => (el as HTMLCanvasElement).width)).toBeGreaterThan(100);
     await expect.poll(async () => canvas.evaluate((el) => { const c = el as HTMLCanvasElement; const ctx = c.getContext('2d'); if (!ctx) return 0; const pixels = ctx.getImageData(0, 0, c.width, c.height).data; let painted = 0; for (let i=3; i<pixels.length; i+=4) if (pixels[i]) painted++; return painted; })).toBeGreaterThan(1000);
     await expect(dialog.getByRole('button', { name: 'Вперёд' })).toHaveCount(0);
-    await scroller.evaluate((el) => { el.scrollTop = el.clientHeight; });
+    await dialog.locator('div[aria-label="Страница 2"]').scrollIntoViewIfNeeded();
     await expect.poll(async () => scroller.evaluate((el) => el.scrollTop)).toBeGreaterThan(100);
     await expect(dialog.locator('canvas[aria-label="Страница 2"]')).toBeVisible();
     await dialog.getByRole('button', { name: 'Увеличить' }).click();
