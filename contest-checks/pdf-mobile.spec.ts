@@ -25,3 +25,22 @@ for (const width of [390, 1280]) {
     await expect(dialog.getByRole('link', { name: 'Скачать документ' })).toBeVisible();
   });
 }
+
+test('MAX Bridge downloads from card and document viewer', async ({ page }) => {
+  await page.goto('/documents');
+  const cards = page.locator('.document-card');
+  await expect(cards).toHaveCount(4);
+  await page.evaluate(() => {
+    const target = window as unknown as { WebApp: unknown; __downloadCalls: Array<{ url: string; name: string }> };
+    target.__downloadCalls = [];
+    target.WebApp = { initData: 'test-mini-app', downloadFile: (url: string, name: string) => { target.__downloadCalls.push({ url, name }); return Promise.resolve({ status: 'downloading' }); } };
+  });
+  await cards.first().getByRole('link', { name: 'Скачать' }).click();
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __downloadCalls: Array<unknown> }).__downloadCalls.length)).toBe(1);
+  const first = await page.evaluate(() => (window as unknown as { __downloadCalls: Array<{ url: string; name: string }> }).__downloadCalls[0]);
+  expect(first?.url).toMatch(/^http://127\.0\.0\.1:3101/api/documents/[^/]+/file\?download=1$/);
+  expect(first?.name).toMatch(/\.pdf$/i);
+  await cards.first().getByRole('button', { name: 'Открыть' }).click();
+  await page.getByRole('dialog').getByRole('link', { name: 'Скачать документ' }).click();
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __downloadCalls: Array<unknown> }).__downloadCalls.length)).toBe(2);
+});
