@@ -34,10 +34,35 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/vibe-platform/vibe-school-platform:contest
+          tags: |
+            ghcr.io/vibe-platform/vibe-school-platform:contest
+            ghcr.io/vibe-platform/vibe-school-platform:sha-${{ github.event.workflow_run.head_sha }}
       - name: Verify package visibility
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api /users/vibe-platform/packages/container/vibe-school-platform --jq .visibility | grep -x public
           echo "Public image: ghcr.io/vibe-platform/vibe-school-platform:contest" >> "$GITHUB_STEP_SUMMARY"
+
+  verify-published:
+    needs: publish
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Pull public image and verify independently
+        run: |
+          set -eu
+          image="ghcr.io/vibe-platform/vibe-school-platform:sha-${{ github.event.workflow_run.head_sha }}"
+          docker pull "$image"
+          docker image inspect "$image" --format '{{index .RepoDigests 0}}' | tee -a "$GITHUB_STEP_SUMMARY"
+          docker run -d --name vibe-registry-test -p 127.0.0.1:3101:3101 "$image"
+          trap 'docker logs vibe-registry-test; docker rm -f vibe-registry-test' EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:3101/api/health > /dev/null; then ready=1; break; fi
+            sleep 2
+          done
+          test "$ready" = 1
+          curl -fsS http://127.0.0.1:3101/ > /dev/null
+          docker exec vibe-registry-test node /app/scripts/check-public-content.mjs
