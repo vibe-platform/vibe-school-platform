@@ -86,3 +86,20 @@ jobs:
           name: browser-test-results
           path: test-results/
           if-no-files-found: ignore
+
+  pdf-viewer:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: docker compose up -d --build --wait
+      - run: npx playwright test --config=pdf-viewer.config.ts
+      - if: always()
+        run: docker compose logs
+      - if: always()
+        run: docker compose down -v
