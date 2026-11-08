@@ -60,6 +60,7 @@ async function main() {
   }
   await prisma.teacherClass.upsert({ where: { teacherId_classId: { teacherId: memberships["user-2"]!, classId: schoolClass.id } }, create: { teacherId: memberships["user-2"]!, classId: schoolClass.id }, update: {} });
 
+  if (process.env.CONTEST_EMPTY_ASSIGNMENTS !== "true") {
   const teacherId = userIds["user-2"]!;
   const studentMembershipId = memberships["user-1"]!;
   const presentationAssignments = [
@@ -97,6 +98,8 @@ async function main() {
     } else if (existing._count.submissions === 0 && !existing.archived) {
       await prisma.assignment.update({ where: { id: existing.id }, data: { dueAt } });
     }
+  }
+
   }
 
   const catalog = new Map<string, { id: string; unlockLevel: number }>();
