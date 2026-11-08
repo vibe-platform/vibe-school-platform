@@ -38,7 +38,8 @@ test('MAX Bridge downloads from card and document viewer', async ({ page }) => {
   await cards.first().getByRole('link', { name: 'Скачать' }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { __downloadCalls: Array<unknown> }).__downloadCalls.length)).toBe(1);
   const first = await page.evaluate(() => (window as unknown as { __downloadCalls: Array<{ url: string; name: string }> }).__downloadCalls[0]);
-  expect(first?.url).toMatch(/^http://127\.0\.0\.1:3101/api/documents/[^/]+/file\?download=1$/);
+  expect(first?.url.startsWith('http://127.0.0.1:3101/api/documents/')).toBe(true);
+  expect(first?.url.endsWith('/file?download=1')).toBe(true);
   expect(first?.name).toMatch(/\.pdf$/i);
   await cards.first().getByRole('button', { name: 'Открыть' }).click();
   await page.getByRole('dialog').getByRole('link', { name: 'Скачать документ' }).click();
