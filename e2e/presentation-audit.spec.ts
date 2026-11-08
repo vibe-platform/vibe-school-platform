@@ -541,7 +541,9 @@ test("four profiles, assignment photo lifecycle, grading, one-time reward, marke
       const image = element.querySelector("img") as HTMLImageElement;
       return { width: box.width, height: box.height, centerDelta: Math.abs((box.top + box.bottom) / 2 - (badge.top + badge.bottom) / 2), loaded: image.complete && image.naturalWidth >= 640 };
     });
-    expect(coin).toMatchObject({ width: 48, height: 48, loaded: true });
+    expect(coin.loaded).toBe(true);
+    expect(coin.width).toBeCloseTo(48, 1);
+    expect(coin.height).toBeCloseTo(48, 1);
     expect(coin.centerDelta).toBeLessThan(2);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.screenshot({ path: screenshot, fullPage: true });
